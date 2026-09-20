@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国文化研习录 · ChineseCulture</title>
+<meta name="description" content="关于中国传统文化的学习笔记与通识讲义。从茶、器物到典籍，把来处讲清楚。">
+<style>
+:root{
+  --paper:#FAF8F3;
+  --paper-2:#FFFFFF;
+  --paper-3:#F4F0E6;
+  --ink:#1E2A24;
+  --ink-2:#41544A;
+  --ink-3:#7C8C83;
+  --line:#E4DED1;
+  --green:#2F7A5A;
+  --green-2:#1F5C42;
+  --green-soft:#E9F3ED;
+  --gold:#B0842C;
+  --gold-soft:#FBF4E3;
+  --shadow:0 1px 2px rgba(30,42,36,.05), 0 8px 24px -12px rgba(30,42,36,.12);
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16px;line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  display:flex;flex-direction:column;
+}
+.serif{font-family:"Songti SC","Source Han Serif SC","Noto Serif SC",Georgia,serif;}
+
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(168deg,#1F3A2E 0%,#2C5741 42%,#3B6B4F 100%);
+  color:#F2F7F3;padding:84px 0 74px;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 84% 20%, rgba(176,132,44,.30), transparent 46%),
+    radial-gradient(circle at 10% 90%, rgba(120,190,150,.18), transparent 42%);
+}
+.hero-inner{position:relative;z-index:2;max-width:960px;margin:0 auto;padding:0 28px;}
+.kicker{
+  display:inline-block;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:#D9C48E;border:1px solid rgba(217,196,142,.45);
+  padding:5px 15px;border-radius:99px;margin-bottom:26px;
+}
+.hero h1{
+  font-family:"Songti SC","Source Han Serif SC",Georgia,serif;
+  font-size:clamp(32px,5.2vw,52px);line-height:1.26;font-weight:700;
+  letter-spacing:.02em;margin-bottom:20px;
+}
+.hero h1 em{font-style:normal;color:#E8CE8C;}
+.hero p{font-size:16.5px;line-height:1.9;color:#CFE0D5;max-width:640px;}
+
+.main{flex:1;max-width:960px;margin:0 auto;padding:56px 28px 40px;width:100%;}
+
+.sec-label{
+  font-family:"Songti SC",Georgia,serif;
+  font-size:13px;letter-spacing:.2em;color:var(--gold);font-weight:700;
+  margin-bottom:6px;
+}
+.sec-title{
+  font-family:"Songti SC",Georgia,serif;
+  font-size:24px;font-weight:700;margin-bottom:26px;
+}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:780px){.cards{grid-template-columns:1fr;}}
+
+.card{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);
+  text-decoration:none;color:inherit;
+  display:flex;flex-direction:column;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(30,42,36,.06),0 16px 34px -14px rgba(30,42,36,.20);}
+.card-top{
+  padding:22px 24px 18px;
+  background:linear-gradient(135deg,#2F7A5A,#245F47);
+  color:#fff;position:relative;
+}
+.card-top .idx{
+  font-family:"Songti SC",Georgia,serif;
+  position:absolute;right:22px;top:18px;
+  font-size:34px;font-weight:700;opacity:.22;line-height:1;
+}
+.card-top h2{
+  font-family:"Songti SC",Georgia,serif;
+  font-size:22px;font-weight:700;letter-spacing:.04em;margin-bottom:5px;
+}
+.card-top .en{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.8;}
+.card-body{padding:18px 24px 22px;flex:1;display:flex;flex-direction:column;}
+.card-body p{font-size:14.4px;color:var(--ink-2);line-height:1.78;margin-bottom:16px;flex:1;}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px;}
+.chip{
+  font-size:12.3px;background:var(--green-soft);color:var(--green-2);
+  padding:3px 10px;border-radius:99px;border:1px solid #D3E6DB;
+}
+.enter{
+  font-size:14px;font-weight:600;color:var(--green-2);
+  display:flex;align-items:center;gap:6px;
+}
+.enter::after{content:"→";transition:transform .2s ease;}
+.card:hover .enter::after{transform:translateX(4px);}
+
+.card.soon{opacity:.62;pointer-events:none;}
+.card.soon .card-top{background:linear-gradient(135deg,#8C9A94,#75837D);}
+.card.soon .enter{color:var(--ink-3);}
+.card.soon .enter::after{content:"·";}
+
+.note{
+  margin-top:34px;padding:20px 24px;border-radius:var(--radius);
+  background:var(--gold-soft);border:1px solid #EEE0C2;
+  font-size:14px;color:#6B5620;line-height:1.8;
+}
+.note b{color:#57440F;}
+
+footer{
+  margin-top:auto;background:#1F3A2E;color:#8FA697;
+  padding:30px 0;font-size:13px;line-height:1.85;
+}
+.footer-inner{max-width:960px;margin:0 auto;padding:0 28px;
+  display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;}
+footer a{color:#B9CFC2;text-decoration:none;border-bottom:1px solid rgba(185,207,194,.35);}
+footer a:hover{color:#E8CE8C;border-bottom-color:rgba(232,206,140,.5);}
+footer .sig{font-family:"Songti SC",Georgia,serif;color:#D9C48E;letter-spacing:.06em;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Chinese Culture Notes</div>
+    <h1>中国文化研习录</h1>
+    <p>
+      这里存放我关于中国传统文化的一些学习笔记与通识讲义。
+      目标是同一个：<strong style="color:#E8CE8C;font-weight:600;">把来处讲清楚</strong>——
+      一件事物从哪来、经历什么、为什么是今天这个样子。
+    </p>
+  </div>
+</header>
+
+<main class="main">
+
+  <div class="sec-label">COLLECTION</div>
+  <div class="sec-title">讲义与专题</div>
+
+  <div class="cards">
+
+    <a class="card" href="./tea/">
+      <div class="card-top">
+        <div class="idx">壹</div>
+        <h2>茶 · 通识讲义</h2>
+        <div class="en">Tea Foundation Course</div>
+      </div>
+      <div class="card-body">
+        <p>
+          从一片叶子到万亿产业。涵盖茶的植物学来源、三千年茶史、
+          六大茶类体系与制茶工艺、四大茶区、再加工茶与现代茶饮、
+          成分科学、产业数据、选泡存实操、茶道茶俗与术语速查。
+        </p>
+        <div class="chips">
+          <span class="chip">11 章</span>
+          <span class="chip">起源与字源</span>
+          <span class="chip">历史时间线</span>
+          <span class="chip">六大茶类</span>
+          <span class="chip">茶道茶俗</span>
+        </div>
+        <div class="enter">开始阅读</div>
+      </div>
+    </a>
+
+    <div class="card soon">
+      <div class="card-top">
+        <div class="idx">贰</div>
+        <h2>待续</h2>
+        <div class="en">Coming Soon</div>
+      </div>
+      <div class="card-body">
+        <p>
+          下一个专题还在酝酿中。可能是瓷器、园林、书画，或者某部典籍。
+          慢慢来，一个一个做扎实。
+        </p>
+        <div class="chips">
+          <span class="chip">筹备中</span>
+        </div>
+        <div class="enter">敬请期待</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <b>关于这个站点</b><br>
+    所有讲义都是单文件 HTML，不依赖外部资源，可以离线阅读，也可以直接用浏览器打印成 PDF。
+    内容会持续修订——发现错漏或想补充的地方，随时改。
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>内容以公开资料整理，欢迎指正。</div>
+    <div class="sig">茶不在贵，适口为珍</div>
+  </div>
+</footer>
+
+</body>
+</html>

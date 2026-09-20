@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>茶行业通识培训讲义 · 从一片叶子到万亿产业</title>
+<style>
+:root{
+  --paper:#FAF8F3;
+  --paper-2:#FFFFFF;
+  --paper-3:#F4F0E6;
+  --ink:#1E2A24;
+  --ink-2:#41544A;
+  --ink-3:#7C8C83;
+  --line:#E4DED1;
+  --line-2:#D3CBB9;
+  --green:#2F7A5A;
+  --green-2:#1F5C42;
+  --green-soft:#E9F3ED;
+  --gold:#B0842C;
+  --gold-soft:#FBF4E3;
+  --red:#A8452C;
+  --red-soft:#FAEDE9;
+  --blue:#3A6B8A;
+  --blue-soft:#EAF1F6;
+  --purple:#6B5B8E;
+  --purple-soft:#F0EDF7;
+  --c-green:#3E8E5A;
+  --c-white:#8C9A94;
+  --c-yellow:#C9A227;
+  --c-oolong:#7B5E3B;
+  --c-red:#A8452C;
+  --c-dark:#4A3B34;
+  --shadow:0 1px 2px rgba(30,42,36,.05), 0 8px 24px -12px rgba(30,42,36,.12);
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:76px;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.serif{font-family:"Songti SC","Source Han Serif SC","Noto Serif SC",Georgia,serif;}
+
+/* ---------- 顶部导航 ---------- */
+.topnav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,248,243,.92);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topnav-inner{
+  max-width:1180px;margin:0 auto;padding:0 28px;
+  display:flex;align-items:center;gap:20px;height:58px;
+}
+.brand{
+  font-family:"Songti SC",Georgia,serif;
+  font-size:17px;font-weight:700;letter-spacing:.06em;
+  color:var(--green-2);white-space:nowrap;
+}
+.brand span{color:var(--gold);}
+.navscroll{
+  display:flex;gap:4px;overflow-x:auto;flex:1;
+  scrollbar-width:none;
+}
+.navscroll::-webkit-scrollbar{display:none;}
+.navscroll a{
+  color:var(--ink-2);text-decoration:none;font-size:13.5px;
+  padding:6px 11px;border-radius:99px;white-space:nowrap;
+  transition:.18s;
+}
+.navscroll a:hover{background:var(--green-soft);color:var(--green-2);}
+
+/* ---------- 版心 ---------- */
+.wrap{max-width:900px;margin:0 auto;padding:0 28px;}
+.wide{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+/* ---------- 封面 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(168deg,#1F3A2E 0%,#2C5741 42%,#3B6B4F 100%);
+  color:#F2F7F3;padding:88px 0 78px;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 82% 22%, rgba(176,132,44,.32), transparent 46%),
+    radial-gradient(circle at 12% 88%, rgba(120,190,150,.20), transparent 42%);
+}
+.hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:0 28px;}
+.hero .kicker{
+  display:inline-block;
+  font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:#D9C48E;border:1px solid rgba(217,196,142,.45);
+  padding:5px 15px;border-radius:99px;margin-bottom:28px;
+}
+.hero h1{
+  font-family:"Songti SC","Source Han Serif SC",Georgia,serif;
+  font-size:clamp(34px,5.4vw,54px);
+  line-height:1.24;font-weight:700;letter-spacing:.02em;
+  margin-bottom:22px;
+}
+.hero h1 em{
+  font-style:normal;color:#E8CE8C;
+}
+.hero .lede{
+  font-size:16.5px;line-height:1.9;color:#CFE0D5;
+  max-width:660px;margin-bottom:38px;
+}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));
+  gap:14px;max-width:760px;
+}
+.hero-stat{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:12px;padding:15px 17px;
+}
+.hero-stat b{
+  display:block;font-family:"Songti SC",Georgia,serif;
+  font-size:23px;color:#F0D99B;line-height:1.2;margin-bottom:3px;
+}
+.hero-stat span{font-size:12.5px;color:#B9CFC2;letter-spacing:.02em;}
+
+/* ---------- 章节 ---------- */
+section.chapter{padding:66px 0 18px;}
+section.chapter + section.chapter{border-top:1px solid var(--line);}
+.chapter-head{margin-bottom:30px;}
+.chapter-no{
+  font-family:"Songti SC",Georgia,serif;
+  font-size:13px;letter-spacing:.2em;color:var(--gold);
+  font-weight:700;margin-bottom:10px;
+}
+h2{
+  font-family:"Songti SC","Source Han Serif SC",Georgia,serif;
+  font-size:clamp(25px,3.2vw,33px);line-height:1.34;
+  font-weight:700;letter-spacing:.01em;margin-bottom:14px;
+}
+h2 .h2sub{
+  display:block;font-family:-apple-system,"PingFang SC",sans-serif;
+  font-size:14px;font-weight:400;color:var(--ink-3);
+  letter-spacing:.04em;margin-top:8px;
+}
+h3{
+  font-family:"Songti SC",Georgia,serif;
+  font-size:20px;font-weight:700;margin:38px 0 14px;
+  padding-left:14px;border-left:3px solid var(--green);
+  line-height:1.45;
+}
+h4{font-size:16.5px;font-weight:600;margin:24px 0 10px;color:var(--green-2);}
+p{margin-bottom:14px;color:var(--ink-2);}
+p strong,li strong{color:var(--ink);font-weight:600;}
+a{color:var(--green);}
+
+ul,ol{margin:0 0 16px 0;padding-left:22px;}
+li{margin-bottom:7px;color:var(--ink-2);}
+li::marker{color:var(--green);}
+
+/* ---------- 组件 ---------- */
+.callout{
+  border-radius:var(--radius);padding:20px 22px;margin:22px 0;
+  border:1px solid var(--line);background:var(--paper-2);
+  box-shadow:var(--shadow);
+}
+.callout .c-title{
+  font-weight:700;font-size:14px;letter-spacing:.06em;
+  margin-bottom:9px;display:flex;align-items:center;gap:8px;
+}
+.callout p:last-child{margin-bottom:0;}
+.callout.tip{background:var(--green-soft);border-color:#CBE2D5;}
+.callout.tip .c-title{color:var(--green-2);}
+.callout.warn{background:var(--red-soft);border-color:#EFD2C9;}
+.callout.warn .c-title{color:var(--red);}
+.callout.note{background:var(--gold-soft);border-color:#EEE0C2;}
+.callout.note .c-title{color:#8A6A1E;}
+.callout.info{background:var(--blue-soft);border-color:#D3E2EC;}
+.callout.info .c-title{color:var(--blue);}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0;}
+@media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr;}}
+
+.card{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);
+}
+.card h5{font-size:15px;font-weight:700;margin-bottom:8px;color:var(--ink);}
+.card p{font-size:14.2px;margin-bottom:0;line-height:1.75;}
+
+table{
+  width:100%;border-collapse:collapse;margin:20px 0;
+  font-size:14.3px;background:var(--paper-2);
+  border-radius:10px;overflow:hidden;
+  box-shadow:var(--shadow);
+}
+thead th{
+  background:var(--paper-3);color:var(--ink);
+  font-weight:600;font-size:13.4px;letter-spacing:.03em;
+  text-align:left;padding:11px 13px;border-bottom:1px solid var(--line-2);
+  white-space:nowrap;
+}
+tbody td{
+  padding:10px 13px;border-bottom:1px solid var(--line);
+  color:var(--ink-2);vertical-align:top;line-height:1.7;
+}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#FCFBF7;}
+.tbl-scroll{overflow-x:auto;}
+
+/* ---------- 发酵光谱 ---------- */
+.spectrum{margin:26px 0 8px;}
+.spectrum-bar{
+  display:flex;height:44px;border-radius:10px;overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.spectrum-bar div{
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.02em;
+  white-space:nowrap;
+}
+.spectrum-scale{
+  display:flex;justify-content:space-between;
+  font-size:12px;color:var(--ink-3);margin-top:9px;
+}
+
+/* ---------- 六大茶类卡 ---------- */
+.tea-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0;}
+@media(max-width:760px){.tea-grid{grid-template-columns:1fr;}}
+.tea{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
+}
+.tea-top{
+  padding:15px 18px;color:#fff;position:relative;
+}
+.tea-top .nm{font-family:"Songti SC",Georgia,serif;font-size:19px;font-weight:700;letter-spacing:.04em;}
+.tea-top .en{font-size:11.5px;letter-spacing:.14em;opacity:.82;text-transform:uppercase;}
+.tea-top .deg{
+  position:absolute;right:16px;top:16px;font-size:12px;
+  background:rgba(255,255,255,.22);border-radius:99px;padding:3px 10px;
+  border:1px solid rgba(255,255,255,.28);
+}
+.tea-body{padding:16px 18px;flex:1;}
+.tea-row{
+  display:grid;grid-template-columns:62px 1fr;gap:10px;
+  padding:7px 0;border-bottom:1px dashed var(--line);
+  font-size:14px;
+}
+.tea-row:last-child{border-bottom:none;}
+.tea-row .k{color:var(--ink-3);font-size:13px;font-weight:600;}
+.tea-row .v{color:var(--ink-2);line-height:1.7;}
+.tea-row .v b{color:var(--ink);}
+
+/* ---------- 时间线 ---------- */
+.timeline{position:relative;margin:30px 0 10px;padding-left:34px;}
+.timeline::before{
+  content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(180deg,var(--green) 0%,#C9B77E 55%,var(--line-2) 100%);
+  border-radius:2px;
+}
+.tl-item{position:relative;margin-bottom:26px;}
+.tl-item::before{
+  content:"";position:absolute;left:-30px;top:8px;
+  width:11px;height:11px;border-radius:50%;
+  background:var(--paper);border:2.5px solid var(--green);
+}
+.tl-era{
+  font-family:"Songti SC",Georgia,serif;
+  font-size:17px;font-weight:700;color:var(--green-2);
+  margin-bottom:5px;
+}
+.tl-era span{
+  font-family:-apple-system,"PingFang SC",sans-serif;
+  font-size:12.5px;font-weight:500;color:var(--gold);
+  letter-spacing:.06em;margin-left:9px;
+}
+.tl-item p{font-size:14.6px;margin-bottom:0;}
+
+/* ---------- 茶区卡 ---------- */
+.region{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-left:4px solid var(--green);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:18px 22px;margin-bottom:14px;box-shadow:var(--shadow);
+}
+.region h5{
+  font-family:"Songti SC",Georgia,serif;
+  font-size:17.5px;font-weight:700;margin-bottom:8px;
+}
+.region .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px;}
+.tag{
+  font-size:12.5px;background:var(--green-soft);color:var(--green-2);
+  padding:3px 10px;border-radius:99px;border:1px solid #D3E6DB;
+}
+
+/* ---------- 数据条 ---------- */
+.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;font-size:14px;}
+.bar-row .lb{width:76px;color:var(--ink-2);flex-shrink:0;}
+.bar-track{flex:1;height:22px;background:var(--paper-3);border-radius:6px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:12px;font-weight:600;}
+
+/* ---------- 术语表 ---------- */
+.glossary{columns:2;column-gap:26px;margin:20px 0;}
+@media(max-width:760px){.glossary{columns:1;}}
+.gloss-item{break-inside:avoid;margin-bottom:13px;}
+.gloss-item b{color:var(--green-2);font-size:14.5px;}
+.gloss-item span{display:block;font-size:13.6px;color:var(--ink-3);line-height:1.65;}
+
+/* ---------- 结尾 ---------- */
+.footer{
+  margin-top:70px;background:#1F3A2E;color:#B9CFC2;
+  padding:44px 0 34px;font-size:13.6px;line-height:1.9;
+}
+.footer .wrap{max-width:900px;}
+.footer b{color:#E8CE8C;}
+.footer .fline{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#8FA697;}
+
+@media print{
+  .topnav{display:none;}
+  body{background:#fff;font-size:11.5pt;}
+  section.chapter{page-break-inside:auto;padding:26px 0 10px;}
+  h2{page-break-after:avoid;}
+  .hero{background:#1F3A2E !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .card,.tea,.callout,table{page-break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 导航 ============ -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <div class="brand">茶 <span>·</span> 通识讲义</div>
+    <div class="navscroll">
+      <a href="#c1">起源</a>
+      <a href="#c2">茶史</a>
+      <a href="#c3">六大茶类</a>
+      <a href="#c4">制茶工艺</a>
+      <a href="#c5">茶区</a>
+      <a href="#c6">再加工茶</a>
+      <a href="#c7">成分科学</a>
+      <a href="#c8">行业经济</a>
+      <a href="#c9">选泡存</a>
+      <a href="#c10">茶道茶俗</a>
+      <a href="#c11">附录</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ 封面 ============ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Tea Industry Foundation Course</div>
+    <h1>从一片叶子<br>到<em>万亿产业</em></h1>
+    <p class="lede">
+      这是一份零基础也能读懂的通识讲义。我们把茶的来处、历史、分类、工艺、产区、
+      科学、商业与文化，串成一条完整的线。读完它，你不会立刻变成茶专家，
+      但你能听懂行内人聊的每一句话，也能在茶桌前安心坐下。
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>5312万亩</b><span>全国茶园面积（2025）</span></div>
+      <div class="hero-stat"><b>364万吨</b><span>干毛茶总产量</span></div>
+      <div class="hero-stat"><b>1.14万亿</b><span>全产业链综合产值</span></div>
+      <div class="hero-stat"><b>2000+</b><span>中国茶品数量</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 第一章 ============ -->
+<section class="chapter" id="c1">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 01</div>
+      <h2>茶从哪里来<span class="h2sub">植物学、字源与最初的传说</span></h2>
+    </div>
+
+    <h3>一株叫「茶」的植物</h3>
+    <p>
+      茶在植物学上的学名是 <em>Camellia sinensis</em>，属于山茶科山茶属，是一种常绿灌木或小乔木。
+      它跟我们熟悉的油茶、观赏山茶花是远亲，但只有这一个物种——以及它的两个变种——
+      才能做成我们喝的茶。
+    </p>
+    <p>这两个变种，决定了中国茶版图的基本样貌：</p>
+    <ul>
+      <li><strong>小叶种（<em>var. sinensis</em>）</strong>：叶片小、耐寒，主要在长江流域及以北。江南、江北茶区的名优绿茶多出自它，香气细腻，滋味清雅。</li>
+      <li><strong>大叶种（<em>var. assamica</em>）</strong>：叶片大、喜温湿，主要在云南、广西、海南一带。内含物质浓，适合做红茶、普洱，滋味厚重耐泡。</li>
+    </ul>
+    <p>
+      一个常被误会的常识：<strong>茶树品种不决定茶类。</strong>
+      同一天、同一棵树上采下来的鲜叶，只要换一套工艺，可以做成绿茶，也可以做成红茶、乌龙茶，甚至黑茶。
+      决定它最终成为什么的，是制茶人的手，不是那棵树。
+    </p>
+
+    <div class="callout tip">
+      <div class="c-title">◆ 一句话记住</div>
+      <p>茶的本质是「同一种叶子 + 不同工艺」。这是理解后面所有内容的钥匙。</p>
+    </div>
+
+    <h3>「茶」这个字，是怎么被写出来的</h3>
+    <p>
+      在唐代以前，茶没有专属的字。人们把它写作<strong>「荼」</strong>（tú）——这个字本义是苦菜，
+      凡是带苦味的植物都可以叫「荼」。所以你读《诗经》里「谁谓荼苦，其甘如荠」，
+      那个「荼」，可能指苦菜，也可能指茶。
+    </p>
+    <p>
+      到中唐，<strong>陆羽</strong>写《茶经》时做了一件事：他从「荼」字里减掉一横，
+      造出了「茶」字，并确定了它的读音（chá）。<strong>这是中国文字史上由一个具体的书，
+      为一个具体的物，专门定字定音定形的罕见案例。</strong>
+    </p>
+    <p>
+      拆开看这个字，更有意思：上面是「艹」（草木），下面是「木」，
+      中间嵌着一个「人」。
+    </p>
+    <div class="callout note">
+      <div class="c-title">◆ 人在草木间</div>
+      <p>
+        「茶」字的结构是<strong>人在草木之间</strong>——一个人，站在植物中间。
+        这不是文字学上严肃的溯源（它其实是形声字），但它成了中国文化里流传最广、也最动人的一种解释：
+        喝茶这件事，本来讲的就是人和自然该怎么相处。
+      </p>
+    </div>
+
+    <h3>神农氏的传说：茶是怎么被「发现」的</h3>
+    <p>
+      关于茶的发现，流传最广的是<strong>神农说</strong>。有两种版本，都很有画面感：
+    </p>
+    <div class="grid2">
+      <div class="card">
+        <h5>版本一：落叶入釜</h5>
+        <p>神农在野外以釜煮水，几片叶子飘进釜中。煮出来的水色微黄、气味清香，饮之生津止渴、提神醒脑。茶的饮用价值就这样被偶然发现。</p>
+      </div>
+      <div class="card">
+        <h5>版本二：得荼而解</h5>
+        <p>「神农尝百草，日遇七十二毒，得荼而解之。」茶在这里是解毒之物——它先被当作药，后来才被当作饮料。这个版本强调了茶的药用起源。</p>
+      </div>
+    </div>
+    <p>
+      陆羽在《茶经》里写下六个字：<strong>「茶之为饮，发乎神农氏。」</strong>
+      这是关于饮茶起源最被广泛引用的说法。当然，从史实角度看，
+      神农是传说人物，这些故事不能当作信史。
+    </p>
+    <p>
+      但它们透露了一个真实的历史顺序：
+      <strong>茶最初是作为药物与食物进入人类生活的，饮用是后来的事。</strong>
+      这符合人类对植物的认知规律——先发现它有用，再发现它好喝。
+    </p>
+
+    <h3>从「吃茶」到「喝茶」</h3>
+    <p>
+      唐代以前，人们喝茶的方式今天看来相当陌生。采下生叶蒸熟、捣碎、碾细，
+      再加上米、姜、盐、葱、陈皮、香料、甚至油脂一起煮——
+      这其实更接近一碗蔬菜汤，古人管它叫<strong>「茗粥」</strong>，
+      喝茶也因此被称为<strong>「吃茶」</strong>（至今在很多方言里还保留着这个说法）。
+    </p>
+    <p>
+      真正把茶从「汤」里解放出来的，是陆羽。他主张去掉那些「重口味」的配料，
+      只加少许盐平衡苦涩，让茶自己说话。这一步之后，茶才从食物变成了饮品，
+      从生存需要变成了精神享受。这也是为什么陆羽被尊为<strong>茶圣</strong>。
+    </p>
+
+    <div class="callout info">
+      <div class="c-title">◆ 关键时间坐标</div>
+      <p>
+        陆羽《茶经》成书于<strong>公元 8 世纪中后期（约 760—780 年）</strong>，
+        是世界上第一部茶学专著，系统论述了茶的源流、采制、煮饮、器具、产区。
+        它的出现，标志着中国茶文化正式形成了体系。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 第二章 ============ -->
+<section class="chapter" id="c2">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 02</div>
+      <h2>三千年茶史<span class="h2sub">从贡品到国饮，从中国到世界</span></h2>
+    </div>
+
+    <p>
+      中国茶史有一条特别清晰的主线：<strong>饮茶方式的每一次变化，都带来茶具、茶类、
+      甚至茶产业格局的连锁反应。</strong>记住这条线，历史就不再是一堆零散的年份。
+    </p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-era">上古·传说时代<span>先秦</span></div>
+        <p>神农尝百草的传说。巴蜀地区先民已知利用茶，茶作为药用与食用，尚未成为独立饮品。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">巴蜀贡茶<span>周—秦</span></div>
+        <p>史料记载周武王伐商时，巴蜀先民已将茶作为贡品上供。这是茶进入政治与礼制视野的起点。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">商品化萌芽<span>汉</span></div>
+        <p>《僮约》中「鲙鱼炮鳖，蒸茶尽具」的记载，说明汉代茶叶已开始商品化流通，出现了专门的茶具。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">以茶养廉<span>魏晋南北朝</span></div>
+        <p>士大夫阶层提倡以茶代酒、以茶养廉，饮茶之风在上层社会兴起，茶开始有了精神属性。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">全民饮茶 · 煎茶法<span>唐</span></div>
+        <p>
+          <strong>最关键的一站。</strong>陆羽《茶经》问世，确立「茶」字、系统总结制茶与煎茶之法；
+          茶饼成为国家战略物资，茶马贸易初创；文人以茶代酒，茶诗大量出现，
+          皎然更在诗中首次明确提出<strong>「茶道」</strong>一词。
+          唐前期「茶」多写作「荼」，长沙窑茶碗上荼、茶二字并见，恰好留下了这个文字演变的实物证据。
+        </p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">点茶法 · 斗茶 · 茶百戏<span>宋</span></div>
+        <p>
+          宋人把茶末放入盏中，注热水、以茶筅击拂，形成白色沫浡——这叫<strong>点茶</strong>。
+          沫浡越白、越厚、越持久越好，于是有了<strong>斗茶</strong>；
+          能在沫浡上写字作画，就是<strong>茶百戏</strong>（比咖啡拉花早了近千年）。
+          宋徽宗赵佶亲著《大观茶论》，蔡襄著《茶录》。
+          宋代也是茶马制度化的时期，1082 年设茶马司。点茶技艺后随宋室南渡传入日本，演化为抹茶道。
+        </p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">废团改散 · 瀹饮法<span>明</span></div>
+        <p>
+          明初朱元璋认为团茶工序繁复、加重茶农负担，下诏罢造龙团、改以芽茶（散茶）进贡。
+          这一道政令改变了此后六百年的中国茶：
+          <strong>茶从「碾末而饮」变成「沸水直冲散茶」，即瀹饮法（撮泡法），沿用至今。</strong>
+          茶具随之革新——茶碾、茶罗、茶筅、黑釉盏退出日常，
+          景德镇白瓷青花杯、宜兴紫砂壶兴起。晚明文人开始讲究茶、器、境三者的协调，饮茶成为审美活动。
+        </p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">外销与万里茶道<span>清</span></div>
+        <p>
+          茶馆茶楼遍布城镇，成为重要的社交与信息场所。中国茶经陆路与海路大量外销，
+          晋商开辟了贯通南北、远达俄罗斯的<strong>「万里茶道」</strong>。
+          至 18 世纪，茶叶已取代丝绸，成为中国第一大类出口商品。
+          宫廷延续茶宴传统，以乾隆「三清茶宴」较具代表性。
+        </p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">衰落与复兴<span>近现代</span></div>
+        <p>
+          19 世纪后，印度、锡兰（今斯里兰卡）等产区崛起，中国茶在国际市场比重下降。
+          20 世纪以来逐步恢复。2015 年前后被称为「新式茶饮元年」，年轻人重新开始喝茶，
+          但喝的是奶茶、果茶、冷泡茶。茶以另一种形态回到了中国人的日常。
+        </p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">列入人类非遗<span>2022</span></div>
+        <p>
+          <strong>2022 年 11 月 29 日</strong>，在摩洛哥拉巴特召开的联合国教科文组织会议上，
+          中国申报的<strong>「中国传统制茶技艺及其相关习俗」</strong>通过评审，
+          列入人类非物质文化遗产代表作名录。
+          该项目涉及 15 个省（区、市）的 <strong>44 个国家级非遗代表性项目</strong>，
+          涵盖六大茶类及再加工茶的制茶技艺，还包括径山茶宴、赶茶场等习俗，
+          是我国历次人类非遗申报中体量最大的一个。
+        </p>
+      </div>
+    </div>
+
+    <h3>读史的三个「抓手」</h3>
+    <div class="grid3">
+      <div class="card">
+        <h5>抓手一：饮法</h5>
+        <p>芼茶（杂煮）→ 煎茶（唐）→ 点茶（宋）→ 瀹饮（明至今）。饮法一变，茶具、茶类全跟着变。</p>
+      </div>
+      <div class="card">
+        <h5>抓手二：形态</h5>
+        <p>饼茶（唐以前—宋）→ 散茶（明以后）。形态一变，制作重心从「压制」转向「杀青与做形」。</p>
+      </div>
+      <div class="card">
+        <h5>抓手三：功能</h5>
+        <p>药 → 食 → 饮 → 礼 → 道 → 商品。功能每升一层，茶在社会中的位置就高一层。</p>
+      </div>
+    </div>
+
+    <h3>中国茶是怎么走向世界的</h3>
+    <p>三条路线，三种命运：</p>
+    <ul>
+      <li><strong>茶马古道</strong>：从四川、云南通往青藏高原，以茶换马。茶叶压成砖，便于马驮长途运输。今天的西藏、四川、云南仍保留大量古道遗存。</li>
+      <li><strong>万里茶道</strong>：由晋商主导，从福建、湖南、湖北经蒙古草原到俄罗斯恰克图，绵延万里。2019 年被国家文物局正式列入《中国世界文化遗产预备名单》。</li>
+      <li><strong>海上茶路</strong>：经广州、厦门等口岸销往欧洲。17—18 世纪，茶成为欧洲上流社会的奢侈品，深刻影响了英国的饮食文化与贸易格局。</li>
+    </ul>
+
+    <div class="callout warn">
+      <div class="c-title">◆ 一个常见误解</div>
+      <p>
+        很多人以为「英国红茶」是英国产的。其实英国本土几乎不产茶
+        （唯一的商业茶园在康沃尔郡，产量极小）。
+        英国人喝的是印度阿萨姆、斯里兰卡锡兰等产区的红茶，加上牛奶和糖，
+        形成了一种独特的饮用方式——<strong>他们贡献的是喝法，不是茶叶。</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 第三章 ============ -->
+<section class="chapter" id="c3">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 03</div>
+      <h2>六大茶类<span class="h2sub">一条发酵光谱，把中国茶分完</span></h2>
+    </div>
+
+    <p>
+      这是整份讲义里最重要的一章。中国有两千多种茶，听起来无从下手，
+      但只要抓住一条标准，就能全部装进六个格子里。
+    </p>
+
+    <div class="callout note">
+      <div class="c-title">◆ 唯一的分类标准</div>
+      <p>
+        现行国家标准 <strong>GB/T 30766《茶叶分类》</strong> 依据<strong>加工工艺</strong>与
+        <strong>茶多酚氧化（俗称「发酵」）程度</strong>，
+        将茶分为绿茶、白茶、黄茶、青茶（乌龙茶）、红茶、黑茶六大基础茶类，
+        外加一个「再加工茶类」。
+      </p>
+      <p>
+        注意：这里的「发酵」，本质是<strong>茶多酚在自身酶的作用下发生的自然氧化反应</strong>，
+        跟酿酒、做酸奶那种微生物发酵不是一回事（黑茶是例外，它确实有微生物参与）。
+        氧化越深，茶汤越醇厚、香气越沉稳；氧化越浅，越保留草木本味，茶汤越清鲜。
+      </p>
+    </div>
+
+    <div class="spectrum">
+      <div class="spectrum-bar">
+        <div style="flex:1.5;background:#3E8E5A;">绿茶 0%</div>
+        <div style="flex:1;background:#8C9A94;">白茶 5–10%</div>
+        <div style="flex:1;background:#C9A227;">黄茶 10–20%</div>
+        <div style="flex:2;background:#7B5E3B;">乌龙 30–60%</div>
+        <div style="flex:1.5;background:#A8452C;">红茶 70–90%</div>
+        <div style="flex:1.5;background:#4A3B34;">黑茶 后发酵</div>
+      </div>
+      <div class="spectrum-scale">
+        <span>← 不发酵 · 清新鲜爽 · 茶性偏凉</span>
+        <span>氧化加深 →</span>
+        <span>后发酵 · 醇厚温润 · 茶性温和 →</span>
+      </div>
+    </div>
+
+    <div class="tea-grid">
+
+      <div class="tea">
+        <div class="tea-top" style="background:linear-gradient(135deg,#3E8E5A,#2F7A4B);">
+          <div class="nm">绿茶</div><div class="en">Green Tea</div>
+          <div class="deg">不发酵</div>
+        </div>
+        <div class="tea-body">
+          <div class="tea-row"><div class="k">核心工序</div><div class="v"><b>杀青</b> → 揉捻 → 干燥</div></div>
+          <div class="tea-row"><div class="k">工艺要点</div><div class="v">鲜叶采下后立即高温处理，使多酚氧化酶失活，锁住绿色。按杀青与干燥方式再分炒青、烘青、晒青、蒸青四类。</div></div>
+          <div class="tea-row"><div class="k">品质特征</div><div class="v">干茶绿、茶汤绿、叶底绿，俗称「三绿」。香气清高，滋味鲜爽，最贴近草木本味。</div></div>
+          <div class="tea-row"><div class="k">代表名茶</div><div class="v">西湖龙井（扁平光滑、糙米色、豆香）、洞庭碧螺春（卷曲如螺、白毫毕露）、黄山毛峰、信阳毛尖、太平猴魁、恩施玉露（蒸青）</div></div>
+          <div class="tea-row"><div class="k">茶性 · 人群</div><div class="v">偏凉。适合夏季、常对电脑、饮食油腻者。<b>胃寒、易腹泻者慎饮浓绿茶。</b></div></div>
+          <div class="tea-row"><div class="k">占比</div><div class="v">占全国茶叶产量 <b>59.03%</b>，是绝对主力品类</div></div>
+        </div>
+      </div>
+
+      <div class="tea">
+        <div class="tea-top" style="background:linear-gradient(135deg,#98A69F,#7C8C85);">
+          <div class="nm">白茶</div><div class="en">White Tea</div>
+          <div class="deg">微发酵</div>
+        </div>
+        <div class="tea-body">
+          <div class="tea-row"><div class="k">核心工序</div><div class="v"><b>萎凋</b> → 干燥（不炒、不揉、不杀青）</div></div>
+          <div class="tea-row"><div class="k">工艺要点</div><div class="v">工艺极简，靠自然摊晾缓慢失水、轻度氧化。最新研究证实，萎凋诱导的脂质代谢重塑是白茶花果香形成的基础。</div></div>
+          <div class="tea-row"><div class="k">品质特征</div><div class="v">满披白毫，汤色杏黄透亮，滋味清甜回甘，毫香清雅。</div></div>
+          <div class="tea-row"><div class="k">代表名茶</div><div class="v">白毫银针（单芽）、白牡丹（一芽一二叶）、贡眉、寿眉（一芽三四叶，性价比高）</div></div>
+          <div class="tea-row"><div class="k">茶性 · 特点</div><div class="v">新茶微凉，陈化后转温。民间有<b>「一年茶、三年药、七年宝」</b>之说，老白茶会转化出枣香、药香。</div></div>
+          <div class="tea-row"><div class="k">占比</div><div class="v">占全国茶叶产量 <b>2.75%</b>，近年增速快</div></div>
+        </div>
+      </div>
+
+      <div class="tea">
+        <div class="tea-top" style="background:linear-gradient(135deg,#D9B441,#B8901F);">
+          <div class="nm">黄茶</div><div class="en">Yellow Tea</div>
+          <div class="deg">轻发酵</div>
+        </div>
+        <div class="tea-body">
+          <div class="tea-row"><div class="k">核心工序</div><div class="v"><b>杀青 → 闷黄</b> → 揉捻 → 干燥</div></div>
+          <div class="tea-row"><div class="k">工艺要点</div><div class="v">基础工艺与绿茶几乎相同，只多一道<b>「闷黄」</b>：杀青后趁热堆积、包裹静置，在湿热环境下温和转化。闷黄时长从数十分钟到数小时不等，有杀青后闷、揉捻后闷、烘闷交替等多种手法。</div></div>
+          <div class="tea-row"><div class="k">品质特征</div><div class="v">标志性的「黄汤黄叶」。青涩感全无，甜度明显提升，带熟玉米香、锅巴甜香，汤感软糯。</div></div>
+          <div class="tea-row"><div class="k">代表名茶</div><div class="v">君山银针（湖南岳阳，有「金镶玉」之誉）、蒙顶黄芽（四川雅安，三炒三闷）、霍山黄芽（安徽）</div></div>
+          <div class="tea-row"><div class="k">茶性 · 特点</div><div class="v">温润，对脾胃刺激性极低，适口性强。<b>六大茶类中最稀缺的品类。</b></div></div>
+          <div class="tea-row"><div class="k">占比</div><div class="v">占全国茶叶产量 <b>0.70%</b>，是六类中最少的</div></div>
+        </div>
+      </div>
+
+      <div class="tea">
+        <div class="tea-top" style="background:linear-gradient(135deg,#87693F,#634A2C);">
+          <div class="nm">乌龙茶（青茶）</div><div class="en">Oolong Tea</div>
+          <div class="deg">半发酵</div>
+        </div>
+        <div class="tea-body">
+          <div class="tea-row"><div class="k">核心工序</div><div class="v"><b>萎凋 → 做青（摇青·凉青）</b> → 杀青 → 揉捻 → 干燥</div></div>
+          <div class="tea-row"><div class="k">工艺要点</div><div class="v">六大茶类中工艺最精妙的一类。通过反复摇青与静置，让叶缘碰撞破损充分氧化、叶心保持绿意，形成<b>「绿叶红镶边」</b>。发酵区间极宽，风味跨度最大。</div></div>
+          <div class="tea-row"><div class="k">品质特征</div><div class="v">天然花果香，滋味浓醇，极耐冲泡。轻发酵偏清香，重发酵偏焙火香与喉韵。</div></div>
+          <div class="tea-row"><div class="k">四大分支</div><div class="v">
+            <b>闽北乌龙</b>：武夷岩茶（大红袍、肉桂、水仙），岩骨花香，发酵偏重<br>
+            <b>闽南乌龙</b>：安溪铁观音、黄金桂，兰花香、音韵长，发酵偏轻<br>
+            <b>广东乌龙</b>：凤凰单丛，一树一香，十大香型<br>
+            <b>台湾乌龙</b>：冻顶乌龙、东方美人、文山包种，花果蜜香
+          </div></div>
+          <div class="tea-row"><div class="k">占比</div><div class="v">占全国茶叶产量 <b>9.61%</b>，是工夫茶的主角</div></div>
+        </div>
+      </div>
+
+      <div class="tea">
+        <div class="tea-top" style="background:linear-gradient(135deg,#B4502F,#8E3722);">
+          <div class="nm">红茶</div><div class="en">Black Tea</div>
+          <div class="deg">全发酵</div>
+        </div>
+        <div class="tea-body">
+          <div class="tea-row"><div class="k">核心工序</div><div class="v">萎凋 → <b>揉捻 → 发酵</b> → 干燥</div></div>
+          <div class="tea-row"><div class="k">工艺要点</div><div class="v">揉捻破坏细胞结构，让茶多酚与内源酶充分接触、几乎完全氧化，大量苦涩物质转化为茶黄素、茶红素，形成「红汤红叶」。</div></div>
+          <div class="tea-row"><div class="k">品质特征</div><div class="v">干茶乌润，汤色红艳透亮（优质红茶有「金圈」），带蜜香、花果甜香、麦芽糖香。茶性温和，刺激性低。</div></div>
+          <div class="tea-row"><div class="k">代表名茶</div><div class="v">正山小种（武夷山桐木关，世界红茶鼻祖，松烟香、桂圆汤）、祁门红茶（独有「祁门香」）、滇红工夫（云南大叶种，浓醇耐泡）</div></div>
+          <div class="tea-row"><div class="k">误区提醒</div><div class="v">「红茶养胃」是流行说法但并非医学概念。科学上更准确的说法是<b>「相对不伤胃」</b>——全发酵后刺激性茶多酚大幅减少。有胃溃疡的人喝浓红茶仍会不适。</div></div>
+          <div class="tea-row"><div class="k">占比</div><div class="v">占全国茶叶产量 <b>15.65%</b>，产值占比 17.81%——<b>产值占比高于产量占比，说明溢价能力强</b></div></div>
+        </div>
+      </div>
+
+      <div class="tea">
+        <div class="tea-top" style="background:linear-gradient(135deg,#544238,#332822);">
+          <div class="nm">黑茶</div><div class="en">Dark Tea</div>
+          <div class="deg">后发酵</div>
+        </div>
+        <div class="tea-body">
+          <div class="tea-row"><div class="k">核心工序</div><div class="v"><b>渥堆</b>（微生物发酵）→ 干燥 → 长期陈化</div></div>
+          <div class="tea-row"><div class="k">工艺要点</div><div class="v">与其他五类完全不同：不靠酶促氧化，而靠<b>湿热环境 + 复合微生物菌群代谢</b>深度转化内含物质。渥堆周期从数日到数十天。紧压成型后，仓储过程中仍持续缓慢陈化——是唯一「会呼吸、会成长」的茶。</div></div>
+          <div class="tea-row"><div class="k">品质特征</div><div class="v">干茶黑褐油润，汤色橙红至褐红，滋味醇厚顺滑，陈香沉稳。</div></div>
+          <div class="tea-row"><div class="k">代表名茶</div><div class="v">安化黑茶（天尖、黑砖、花砖、金花茯砖）、雅安藏茶（康砖、金尖）、咸阳/泾阳茯茶、广西六堡茶（槟榔香）</div></div>
+          <div class="tea-row"><div class="k">茶性 · 存储</div><div class="v">温润醇厚。需通风、干燥、避光、无异味、常温存放，适合长期陈化。</div></div>
+          <div class="tea-row"><div class="k">占比</div><div class="v">占全国茶叶产量 <b>12.26%</b></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3>绕不开的普洱茶：它算黑茶吗？</h3>
+    <p>
+      这是茶圈最经典的争议话题。理清它，你对茶类体系的理解会上一个台阶。
+    </p>
+    <p>
+      普洱茶分<strong>生茶</strong>和<strong>熟茶</strong>，原料同源——都是云南大叶种晒青毛茶，
+      区别只在后期工艺：
+    </p>
+    <ul>
+      <li><strong>普洱熟茶</strong>：晒青毛茶经人工洒水渥堆、微生物发酵制成。工艺、转化逻辑、茶性完全贴合黑茶体系，<strong>行业内一致归入黑茶范畴</strong>。</li>
+      <li><strong>普洱生茶</strong>：晒青毛茶仅经蒸压成型、自然干燥，<strong>无人工渥堆</strong>。它的初制工艺本质是晒青绿茶，所以新生茶清鲜凛冽、近似绿茶；但它的核心价值在于长期仓储持续转化，随年份递增会慢慢走向黑茶的陈韵路径。</li>
+    </ul>
+    <div class="callout info">
+      <div class="c-title">◆ 为什么会争议</div>
+      <p>
+        早年六大茶类体系建立时，市面上主流流通的只有熟普，所以普洱茶被整体归入黑茶。
+        后来古树茶、老生茶市场兴起，人们发现生茶新老跨度极大、变化周期极长，
+        才产生了「生茶是否应自成体系」的讨论。
+      </p>
+      <p>
+        <strong>实用记法：</strong>熟普 = 黑茶属性，温润醇和；新生普 = 绿茶工艺，清鲜凛冽；老生普 = 长期陈化后走向黑茶陈韵。
+      </p>
+    </div>
+
+    <h3>把六类压缩成一张表</h3>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>茶类</th><th>发酵度</th><th>关键工序</th><th>汤色</th><th>茶性</th><th>适饮时机</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>绿茶</b></td><td>0%</td><td>杀青</td><td>清汤绿叶</td><td>偏凉</td><td>春夏、提神解腻</td></tr>
+          <tr><td><b>白茶</b></td><td>5–10%</td><td>萎凋</td><td>杏黄浅亮</td><td>新茶微凉 → 陈茶转温</td><td>四季皆宜，愈陈愈和</td></tr>
+          <tr><td><b>黄茶</b></td><td>10–20%</td><td>闷黄</td><td>黄汤黄叶</td><td>温润</td><td>脾胃弱者日常</td></tr>
+          <tr><td><b>乌龙茶</b></td><td>30–60%</td><td>做青</td><td>橙黄明亮</td><td>温凉适中</td><td>餐后、细品慢聊</td></tr>
+          <tr><td><b>红茶</b></td><td>70–90%</td><td>发酵</td><td>红艳明亮</td><td>温和</td><td>秋冬、加奶不加奶皆宜</td></tr>
+          <tr><td><b>黑茶</b></td><td>后发酵</td><td>渥堆</td><td>橙红至褐红</td><td>温润醇厚</td><td>饭后解腻、长期陈化</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout tip">
+      <div class="c-title">◆ 新手选茶的建议</div>
+      <p>
+        如果完全没概念，从<strong>熟普、红茶、老白茶</strong>开始试水最稳妥——
+        它们温和、容错率高，泡久了也不容易苦涩。等味觉建立起来，再往绿茶、乌龙茶走。
+        茶不在贵，适口为珍。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 第四章 ============ -->
+<section class="chapter" id="c4">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 04</div>
+      <h2>制茶工艺词典<span class="h2sub">七个动词，决定一片叶子的命运</span></h2>
+    </div>
+
+    <p>
+      制茶听起来神秘，其实就是<strong>控制氧化</strong>的过程。制茶师用一组固定的动作，
+      决定这片叶子是继续氧化、停止氧化，还是换一种方式转化。
+      下面这七个词，是听懂制茶的关键。
+    </p>
+
+    <div class="grid2">
+      <div class="card">
+        <h5>1. 萎凋 · 摊晾失水</h5>
+        <p>把鲜叶均匀摊开，让它自然散失部分水分，叶片变柔软、便于后续造型。同时启动内部的物质转化，是白茶、红茶、乌龙茶的第一道关卡。萎凋做得好不好，直接决定香气能否形成。</p>
+      </div>
+      <div class="card">
+        <h5>2. 杀青 · 高温定生死</h5>
+        <p>用高温（炒、蒸、烘）迅速使多酚氧化酶失活，让氧化反应<strong>就此停住</strong>。绿茶靠它保持绿色，黄茶、乌龙茶也都要经过它。</p>
+      </div>
+      <div class="card">
+        <h5>3. 揉捻 · 破壁造形</h5>
+        <p>通过外力让叶片细胞破碎，茶汁渗出附着在表面，既塑造成条索、圆珠、扁平各种形状，也让内含物质更容易溶出。红茶揉捻更重，为的是让茶多酚与酶充分接触。</p>
+      </div>
+      <div class="card">
+        <h5>4. 做青 · 摇出花果香</h5>
+        <p>乌龙茶独有的工序：反复<strong>摇青</strong>（叶缘碰撞破损）与<strong>凉青</strong>（静置恢复）交替。叶缘先氧化泛红，叶心保持绿意，形成「绿叶红镶边」，同时催生天然花果香。</p>
+      </div>
+      <div class="card">
+        <h5>5. 闷黄 · 黄茶的身份证</h5>
+        <p>杀青后趁热堆积、包裹静置，在湿热条件下发生温和的非酶促氧化。叶绿素适度降解、茶多酚柔和转化，青涩感褪去，甜度上升，做出独特的黄汤黄叶。</p>
+      </div>
+      <div class="card">
+        <h5>6. 渥堆 · 交给微生物</h5>
+        <p>黑茶的灵魂工序。茶叶在湿热环境中堆积，靠复合微生物菌群代谢深度转化。周期数日至数十天，需要翻堆控温。做出来的茶醇厚顺滑，且能长期陈化。</p>
+      </div>
+      <div class="card">
+        <h5>7. 发酵 · 红茶的变色术</h5>
+        <p>红茶的关键一步：在适宜温湿度下让茶多酚几乎完全氧化，生成茶黄素、茶红素。叶子从绿转红，苦涩转为甜醇。</p>
+      </div>
+      <div class="card">
+        <h5>+ 焙火 / 窨制 · 风味加成</h5>
+        <p><strong>焙火</strong>是武夷岩茶、浓香型乌龙的精制手段，用炭火或电焙缓慢烘焙，做出火香与喉韵。<strong>窨制</strong>是花茶专属，见下一章。</p>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="c-title">◆ 一条公式</div>
+      <p>
+        <strong>杀青 → 绿茶；萎凋 → 白茶；杀青+闷黄 → 黄茶；
+        做青 → 乌龙茶；揉捻+发酵 → 红茶；渥堆 → 黑茶。</strong>
+        六个茶类，六种打断或引导氧化的方式。这就是全部秘密。
+      </p>
+    </div>
+
+    <h3>鲜叶采摘：等级是怎么来的</h3>
+    <p>
+      采茶的讲究，核心在<strong>嫩度</strong>。同一个芽头，采得越早、标准越严，成本越高。
+    </p>
+    <ul>
+      <li><strong>单芽</strong>：只采一个芽头。最嫩，如白毫银针、金骏眉。产量极低。</li>
+      <li><strong>一芽一叶</strong>：一个芽加一片初展叶。高端绿茶、红茶的常见标准。</li>
+      <li><strong>一芽二叶</strong>：兼顾嫩度与醇厚度，多数名优茶的性价比区间。</li>
+      <li><strong>一芽三四叶</strong>：叶片成熟、内含物质丰富，适合做寿眉、黑茶等耐泡或需陈化的茶。</li>
+    </ul>
+    <p>
+      时间上也有讲究：<strong>明前茶</strong>（清明前采制）最鲜嫩、价最高；
+      <strong>雨前茶</strong>（谷雨前）性价比高，味更浓，是日常口粮茶的主流。
+    </p>
+
+    <div class="callout warn">
+      <div class="c-title">◆ 破除一个迷思</div>
+      <p>
+        <strong>绿茶不是「越早越好」。</strong>名优绿茶以清明左右采制为最佳，谷雨次之。
+        不同产区、不同品种有自己的最佳采摘窗口，盲目追求「抢早」反而可能买到内含物质不足的茶。
+      </p>
+    </div>
+
+    <h3>精制：从毛茶到成品</h3>
+    <p>
+      初制做出来的叫<strong>毛茶</strong>，还要经过精制才能上市。精制主要干四件事：
+      筛分（按大小分级）、切断与轧碎、风选（按轻重去杂）、拣剔（去梗去杂）。
+      最后是<strong>拼配</strong>与<strong>匀堆</strong>——把不同批次、不同产区的茶按比例混合，
+      目的是<strong>让每一批产品的风味稳定一致</strong>。
+    </p>
+    <p>
+      顺便说一句：<strong>拼配不是造假</strong>。它是茶叶工业里技术含量很高的环节，
+      大厂的核心竞争力之一就是拼配配方。买到「拼配茶」不等于买到劣质茶。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 第五章 ============ -->
+<section class="chapter" id="c5">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 05</div>
+      <h2>中国四大茶区<span class="h2sub">21 个省、上千个县，各有各的脾气</span></h2>
+    </div>
+
+    <p>
+      中国茶区东起台湾东部海岸，西至西藏易贡，南自海南岛榆林，北到山东荣成，
+      东西跨 27 个经度、南北跨 19 个纬度。全国有 21 个省（区、市）、上千个县产茶。
+      宏观上分为<strong>四大一级茶区</strong>。
+    </p>
+
+    <div class="region" style="border-left-color:#3E8E5A;">
+      <h5>一、江南茶区 —— 名优绿茶的集中产区</h5>
+      <p>
+        位于长江以南，包括浙江、湖南、江西、安徽南部、江苏南部、湖北南部、福建北部等。
+        四季分明、春夏多雨、丘陵遍布，茶树以灌木型中小叶种为主。
+        这是中国绿茶生产最集中的区域，六大茶类在这里几乎都能找到。
+      </p>
+      <div class="tags">
+        <span class="tag">西湖龙井</span><span class="tag">洞庭碧螺春</span>
+        <span class="tag">黄山毛峰</span><span class="tag">太平猴魁</span>
+        <span class="tag">君山银针</span><span class="tag">安化黑茶</span>
+        <span class="tag">恩施玉露</span><span class="tag">庐山云雾</span>
+        <span class="tag">安吉白茶</span>
+      </div>
+    </div>
+
+    <div class="region" style="border-left-color:#8C9A94;">
+      <h5>二、江北茶区 —— 最北的茶区，产量少但个性足</h5>
+      <p>
+        从长江向北直抵秦岭、淮河以南，包括河南南部、陕西南部、甘肃南部、
+        山东南部、安徽北部、江苏北部、湖北北部。
+        纬度较高、年均温低、茶树生长周期长，产量不大但内含物质积累充分，
+        茶味偏浓、耐泡。以绿茶为主，茶树均为灌木型中小叶种。
+      </p>
+      <div class="tags">
+        <span class="tag">信阳毛尖</span><span class="tag">六安瓜片</span>
+        <span class="tag">紫阳毛尖</span><span class="tag">午子仙毫</span>
+        <span class="tag">日照绿茶</span>
+      </div>
+    </div>
+
+    <div class="region" style="border-left-color:#B0842C;">
+      <h5>三、西南茶区 —— 世界茶树的发源地</h5>
+      <p>
+        包括云南、贵州、四川、重庆及西藏东南部。地形复杂、海拔高、昼夜温差大，
+        是中国最古老的茶叶产地，也是世界茶树的原产地之一。
+        这里可以考证到中国茶大部分的演化史。
+        以黑茶、红茶、绿茶为主，也是外销碎茶、边销茶、花茶的主要产地。
+      </p>
+      <div class="tags">
+        <span class="tag">普洱茶</span><span class="tag">滇红工夫</span>
+        <span class="tag">蒙顶甘露</span><span class="tag">蒙顶黄芽</span>
+        <span class="tag">峨眉竹叶青</span><span class="tag">都匀毛尖</span>
+        <span class="tag">遵义毛峰</span><span class="tag">雅安藏茶</span>
+      </div>
+    </div>
+
+    <div class="region" style="border-left-color:#A8452C;">
+      <h5>四、华南茶区 —— 最适宜茶树生长的地方</h5>
+      <p>
+        包括广东、广西、福建、海南及云南南部。热带、亚热带季风气候，
+        高温多雨、湿度大、多山地丘陵，茶树以乔木型和小乔木大叶种偏多，品种资源极其丰富。
+        以乌龙茶、红茶、白茶、黑茶、花茶为主，也是中国工夫茶品饮艺术的发源区域。
+      </p>
+      <div class="tags">
+        <span class="tag">安溪铁观音</span><span class="tag">武夷岩茶</span>
+        <span class="tag">正山小种</span><span class="tag">福鼎白茶</span>
+        <span class="tag">凤凰单丛</span><span class="tag">英德红茶</span>
+        <span class="tag">广西六堡茶</span><span class="tag">横州茉莉花茶</span>
+        <span class="tag">冻顶乌龙</span>
+      </div>
+    </div>
+
+    <div class="callout info">
+      <div class="c-title">◆ 补充：台湾茶区</div>
+      <p>
+        在中国香港、中国台湾等地区也有茶叶生产。中国台湾茶区在分类上属华南茶区，
+        以高山乌龙茶著称，如阿里山茶、梨山茶、冻顶乌龙、文山包种、白毫乌龙（东方美人）。
+      </p>
+    </div>
+
+    <div class="callout note">
+      <div class="c-title">◆ 产茶省格局（2025）</div>
+      <p>
+        云南、贵州、四川、湖北四省茶园面积继续保持领先。
+        福建、云南、贵州等省份茶产业规模已跻身千亿级；四川全省茶园面积稳定在 590 万亩左右，
+        茶产业年综合产值突破 1200 亿元。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 第六章 ============ -->
+<section class="chapter" id="c6">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 06</div>
+      <h2>再加工茶与现代茶饮<span class="h2sub">茶的第二次变形记</span></h2>
+    </div>
+
+    <p>
+      六大基础茶类之外，国家标准还设了一个<strong>「再加工茶类」</strong>——
+      以基础茶为原料，再经过一次加工。这是理解当下茶消费市场绕不开的部分。
+    </p>
+
+    <h3>花茶：中国最典型的再加工茶</h3>
+    <p>
+      花茶的核心工艺叫<strong>窨制（xūn zhì）</strong>。原理其实很朴素：
+      干燥的茶叶孔隙发达，像一块多孔海绵，能吸附周围的气味分子。
+      制茶人利用这一点，让茶叶去「吸」鲜花的香气。
+    </p>
+    <p>
+      以茉莉花茶为例，完整流程大致是这样：
+    </p>
+    <ol>
+      <li><strong>茶坯处理</strong>：以优质烘青绿茶为基底，100–110℃ 复火，把含水量控制在 4%–5%，让孔隙充分舒展、吸附力拉满；摊凉至室温以下才能付窨（高温会灼伤鲜花）。</li>
+      <li><strong>鲜花养护（伺花）</strong>：只采午后含苞的双瓣茉莉，青蕾与全开残花一律舍弃，采后 5 小时内进厂。通过「堆—摊—抛—堆」反复操作，控制堆温在适宜区间（一般 30–38℃，不超 45℃），待 80% 以上花苞呈虎爪状半开、香气释放达顶峰，才能使用。</li>
+      <li><strong>茶花拌和</strong>：按窨次设定配花量，头窨用花最多、逐窨递减。高端九窨花茶，累计鲜花用量可达茶重的 6 倍。</li>
+      <li><strong>静置窨花</strong>：封堆静置 9–14 小时。黄金堆温区间约 38–48℃——温度太低吐香缓慢，超过 50℃ 鲜花快速早衰产生水闷味。</li>
+      <li><strong>通花续窨</strong>：拌和 4–6 小时后堆温升至 43℃ 左右，必须把整堆扒开摊薄散热换气，再收堆续窨。高温季节一夜要通花两三次，老师傅整夜轮班盯温度，这是花茶厂几十年不变的常态。</li>
+      <li><strong>起花筛分</strong>：震动筛把干枯花渣与吸香茶坯彻底分离，做到「去净残花」。</li>
+      <li><strong>烘干复火</strong>：锁住已吸收的花香，然后摊凉，进入下一轮复窨。</li>
+      <li><strong>提花</strong>：所有窨次完成后，用少量顶级新花短时窨 3–6 小时，不复火烘干，最大程度保留鲜活花香。这是区分普通花茶与高端多窨茶的关键一步。</li>
+    </ol>
+
+    <div class="callout tip">
+      <div class="c-title">◆ 一步判断花茶好坏</div>
+      <p>
+        优质茉莉花茶的成品<strong>几乎看不见干花碎瓣</strong>。
+        花香是完全渗进茶骨的，不是浮在表面。
+        如果一杯「茉莉花茶」里漂着大量干花瓣，那多半是「拌花」而非「窨制」。
+      </p>
+      <p>
+        <strong>窨次</strong>是决定花茶等级和价格的核心因素。三窨、五窨、九窨，
+        每一次窨制都让香气更浓、层次更丰富。买的时候可以直接问商家。
+      </p>
+    </div>
+
+    <p>
+      产区方面，<strong>广西横州</strong>是全球茉莉花核心产区，
+      全球每 10 朵茉莉花大约有 6 朵来自这里，茉莉鲜花产量占全国 80% 以上，
+      被称为「世界茉莉之都」。
+    </p>
+
+    <h3>紧压茶与边销茶</h3>
+    <p>
+      把茶叶蒸软后压成砖、饼、沱等形状，是古代为长途运输而发明的智慧。
+      压紧后体积小、耐颠簸、便于马驮，而且紧压状态下更利于缓慢陈化。
+    </p>
+    <ul>
+      <li><strong>普洱茶饼/砖/沱</strong>：云南代表，357 克的七子饼是经典规格。</li>
+      <li><strong>安化黑茶</strong>：天尖、黑砖、花砖、金花茯砖——茯砖中「金花」是一种益生菌（冠突散囊菌），是品质标志。</li>
+      <li><strong>雅安藏茶</strong>：南路边茶代表，压制成康砖、金尖，主要销往藏区。</li>
+      <li><strong>六堡茶</strong>：广西梧州，经典槟榔香，历史上经「茶船古道」销往东南亚。</li>
+    </ul>
+
+    <h3>抹茶：从中国宋朝，绕道日本，再回来</h3>
+    <p>
+      抹茶的本质是<strong>「蒸青绿茶研磨成的粉末」</strong>。它的技术源头在中国宋代点茶，
+      后传入日本被发展成抹茶道。近年随新茶饮和烘焙业爆发，
+      中国已成为全球最大抹茶生产国：
+    </p>
+    <ul>
+      <li>2020 至 2025 年，全球抹茶产量从 8266 吨增长至 17600 吨，增幅 113%，年均增长率超 20%。</li>
+      <li>2025 年，中国抹茶总产量突破 12000 吨，<strong>占全球近 70%</strong>。</li>
+    </ul>
+    <p>
+      抹茶除直饮外，还广泛应用于冰淇淋、蛋糕等食品，并作为天然色素用于化妆品领域。
+    </p>
+
+    <h3>新式茶饮：茶的新增长极</h3>
+    <p>
+      这是过去十年茶产业最大的变量。用一句话概括：
+      <strong>它把茶从「农产品」重新做成了「快消品」和「社交产品」。</strong>
+    </p>
+    <div class="grid3">
+      <div class="card">
+        <h5>规模</h5>
+        <p>2025 年中国新式茶饮市场规模达 <strong>3749.3 亿元</strong>，同比增长 5.7%，预计 2028 年有望突破 4000 亿元。</p>
+      </div>
+      <div class="card">
+        <h5>增速换挡</h5>
+        <p>远低于 2017–2022 年 24.9% 的复合年均增长率。行业已从「跑马圈地」转入<strong>存量博弈、精耕细作</strong>阶段。</p>
+      </div>
+      <div class="card">
+        <h5>消费习惯</h5>
+        <p>61.2% 的消费者每周购买 3–5 次；最能接受的客单价区间为 <strong>16–20 元</strong>（占比 44.2%）。</p>
+      </div>
+    </div>
+    <p>几个关键趋势：</p>
+    <ul>
+      <li><strong>健康化落地</strong>：无糖茶占比从 2020 年的 10% 提升至 2025 年的 35%；含糖茶持续下滑。益生菌、膳食纤维等功能成分从营销概念变成产品标配。</li>
+      <li><strong>资本化与全球化</strong>：古茗、蜜雪冰城、霸王茶姬、沪上阿姨相继上市；蜜雪冰城以约 5.3 万家门店成为全球最大餐饮连锁，茶饮成为中国式文化输出的符号。</li>
+      <li><strong>渠道即时化</strong>：即时零售占比持续提升，部分品牌闪购渠道春节订单周环比增长 150%。</li>
+      <li><strong>冷泡茶崛起</strong>：以完整原叶为原料、冷水即可冲泡，适配通勤、办公、户外等碎片化场景，正在形成一个独立的规模化赛道。</li>
+    </ul>
+
+    <div class="callout warn">
+      <div class="c-title">◆ 传统茶企为什么被挤压</div>
+      <p>
+        新茶饮的原叶茶需求，改变了上游原料茶的生产结构——大宗茶、机采茶的需求上升。
+        而传统老牌茶企线下渠道资源稳固，但线上流量运营体系搭建滞后，
+        线上份额持续被新式快消茶企分流。
+        2026 年上半年，10 家上市茶企营收分化明显：八马茶业营收 14.02 亿元（同比 +31.8%），
+        而天福营收 6.24 亿元（同比 −7.2%）。
+        <strong>行业的底层竞争逻辑，已经从门店扩张转向供应链管控与精细化运营。</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 第七章 ============ -->
+<section class="chapter" id="c7">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 07</div>
+      <h2>茶杯里的科学<span class="h2sub">三大成分、健康价值与常见误区</span></h2>
+    </div>
+
+    <h3>茶叶里到底有什么</h3>
+    <p>
+      茶叶中已检测出 300 多种成分。其中真正决定风味与健康价值的，是三位主角：
+    </p>
+
+    <div class="grid3">
+      <div class="card">
+        <h5>茶多酚（占干重 18%–36%）</h5>
+        <p>主力是<strong>儿茶素</strong>，其中活性最强的是 <strong>EGCG</strong>。它是抗氧化、抗炎的主力军，能清除自由基、抑制低密度脂蛋白氧化。<strong>绿茶中保留最多</strong>；红茶全发酵后部分转化为茶黄素、茶红素，含量降至 8%–15%。</p>
+      </div>
+      <div class="card">
+        <h5>咖啡碱（占干重 2%–4%）</h5>
+        <p>提神醒脑、利尿。含量低于咖啡，但作用更持久——因为茶汤中的茶多酚会与咖啡碱形成复合物，使咖啡碱缓慢释放，避免血液浓度骤升骤降。</p>
+      </div>
+      <div class="card">
+        <h5>茶氨酸（占游离氨基酸 50%–70%）</h5>
+        <p>茶叶特有的游离氨基酸，能穿过血脑屏障，促进大脑释放 α 波，产生<strong>放松而不嗜睡</strong>的效果。<strong>这是喝茶提神却不像喝咖啡那样心慌的原因</strong>——茶氨酸能拮抗咖啡碱引起的兴奋。</p>
+      </div>
+    </div>
+
+    <p>
+      此外还有维生素 C、B 族、维生素 E、钾、钙、镁、氟等矿物质，
+      以及膳食纤维和决定香气的挥发油。
+    </p>
+
+    <div class="callout tip">
+      <div class="c-title">◆ 为什么茶比咖啡「温柔」</div>
+      <p>
+        咖啡因让你清醒，茶氨酸让你平静——两者同时存在于一杯茶里，
+        形成一种<strong>「清醒的放松」</strong>状态。
+        这就是很多人喝咖啡心悸、喝茶却不会的原因。
+      </p>
+    </div>
+
+    <h3>按需选茶：一份成分导向的参考</h3>
+    <p>
+      下面这张表基于成分特性整理，<strong>不构成医疗建议</strong>，仅作选茶参考。
+    </p>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>你的情况</th><th>可以优先考虑</th><th>依据与提醒</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>常对电脑、饮食油腻</td><td>绿茶</td><td>未氧化茶多酚（尤其 EGCG）含量最高。<b>胃寒、易腹泻者慎饮浓绿茶</b>，高浓度茶多酚会刺激胃黏膜。</td></tr>
+          <tr><td>肠胃娇弱、吃凉的不舒服</td><td>红茶、熟普洱</td><td>全发酵后刺激性游离茶多酚减少 90% 以上，转化为茶黄素。<b>注意：「养胃」不是医学概念</b>，只能理解为「相对不伤胃」。</td></tr>
+          <tr><td>易焦虑、失眠</td><td>老白茶、低咖啡因茶</td><td>白茶茶氨酸含量在六大茶类中名列前茅；老白茶经时间转化，刺激性降低。<b>但任何茶只要浓，咖啡碱就高</b>——睡前 4–6 小时不建议喝浓茶。</td></tr>
+          <tr><td>常吃大鱼大肉、血脂偏高</td><td>乌龙茶、黑茶</td><td>部分研究显示相关成分有辅助降脂潜力。<b>但喝茶不能抵消热量超标</b>，不能替代饮食与运动管理。</td></tr>
+          <tr><td>缺铁性贫血</td><td>——</td><td>茶多酚会与非血红素铁结合形成难溶复合物，阻碍铁吸收。建议饭前饭后 1 小时内不喝茶。</td></tr>
+          <tr><td>痛风急性发作期</td><td>——</td><td>茶叶含少量嘌呤和草酸，浓茶可能影响尿酸排泄，急性期以白开水为主。</td></tr>
+          <tr><td>孕妇及哺乳期</td><td>——</td><td>咖啡碱能穿过胎盘并进入乳汁，需严格控制摄入量。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>四个必须澄清的误区</h3>
+    <div class="grid2">
+      <div class="card">
+        <h5>误区一：喝茶能抗癌</h5>
+        <p>细胞与动物实验中，茶多酚确实显示出抗氧化、抑制肿瘤细胞增殖等作用。但<strong>这只是实验室层面的发现，不等于「喝茶能防癌」</strong>。目前没有足够证据支持把茶当作抗癌手段。</p>
+      </div>
+      <div class="card">
+        <h5>误区二：喝茶能调节人体酸碱性</h5>
+        <p>人体有精密的酸碱缓冲系统，血液 pH 稳定在很窄的区间内，<strong>饮食无法改变它</strong>。「酸性体质」本身就是一个不成立的概念。</p>
+      </div>
+      <div class="card">
+        <h5>误区三：抗氧化剂补得越多越好</h5>
+        <p>自由基并非只有坏处——机体也会利用它攻击入侵病菌、清理癌变细胞。正常健康人额外补充抗氧化剂来清除自由基，<strong>既不必要也不靠谱</strong>。</p>
+      </div>
+      <div class="card">
+        <h5>误区四：所有茶都越陈越香</h5>
+        <p>只有<strong>后发酵类（黑茶、普洱）和陈年白茶</strong>适合长期存放转化。绿茶、黄茶、茉莉花茶讲究新鲜，放久了只会香气散失、品质下降。</p>
+      </div>
+    </div>
+
+    <div class="callout info">
+      <div class="c-title">◆ 每日饮茶建议</div>
+      <ul style="margin-bottom:0;">
+        <li>每日干茶用量建议控制在 <strong>12 克以内</strong>，分 3–4 次冲泡。</li>
+        <li>不要空腹饮浓茶，容易心慌、反酸。</li>
+        <li>不要喝太烫的茶——长期饮用过热饮品与食道损伤相关，温饮最宜。</li>
+        <li>不要久泡不饮：茶叶浸泡超过 12 小时会析出过量茶碱，还可能滋生微生物。</li>
+        <li>服药前后 1 小时别喝茶，茶碱和鞣酸会影响部分药物吸收。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 第八章 ============ -->
+<section class="chapter" id="c8">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 08</div>
+      <h2>茶产业全景<span class="h2sub">数据、链条与竞争格局</span></h2>
+    </div>
+
+    <h3>中国茶产业：2025 年核心数据</h3>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>指标</th><th>数据</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>茶园面积</td><td><b>5312.26 万亩</b></td><td>增势趋缓，从规模扩张转向质量提升</td></tr>
+          <tr><td>干毛茶总产量</td><td><b>364.03 万吨</b></td><td>中国茶叶流通协会口径，同比 +5.89%（另有国家统计局全口径 392 万吨）</td></tr>
+          <tr><td>干毛茶总产值</td><td><b>3331.94 亿元</b></td><td>农业产值，同比 +5.69%</td></tr>
+          <tr><td>传统茶内销总量</td><td><b>237.77 万吨</b></td><td>内销总额 3099.34 亿元</td></tr>
+          <tr><td>茶叶出口</td><td><b>41.88 万吨 / 15.46 亿美元</b></td><td>量、额双双创历史新高，同比 +11.95%</td></tr>
+          <tr><td>全产业链综合产值</td><td><b>约 1.14 万亿元</b></td><td>含精深加工、新茶饮、茶文旅、茶包装茶具等</td></tr>
+          <tr><td>新式茶饮市场规模</td><td><b>3749.3 亿元</b></td><td>同比 +5.7%</td></tr>
+          <tr><td>即饮茶（瓶装茶饮料）</td><td>产量近 2200 万吨，产值超 1000 亿元</td><td>茶产业的重要延伸板块</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>六大茶类产量占比</h3>
+    <div class="bar-row"><div class="lb">绿茶</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#3E8E5A;">59.03%</div></div></div>
+    <div class="bar-row"><div class="lb">红茶</div><div class="bar-track"><div class="bar-fill" style="width:26.5%;background:#A8452C;">15.65%</div></div></div>
+    <div class="bar-row"><div class="lb">黑茶</div><div class="bar-track"><div class="bar-fill" style="width:20.8%;background:#4A3B34;">12.26%</div></div></div>
+    <div class="bar-row"><div class="lb">乌龙茶</div><div class="bar-track"><div class="bar-fill" style="width:16.3%;background:#7B5E3B;">9.61%</div></div></div>
+    <div class="bar-row"><div class="lb">白茶</div><div class="bar-track"><div class="bar-fill" style="width:4.7%;background:#8C9A94;">2.75%</div></div></div>
+    <div class="bar-row"><div class="lb">黄茶</div><div class="bar-track"><div class="bar-fill" style="width:1.2%;background:#C9A227;">0.70%</div></div></div>
+
+    <div class="callout note">
+      <div class="c-title">◆ 一个值得注意的细节</div>
+      <p>
+        红茶的<strong>产值占比（17.81%）高于产量占比（15.65%）</strong>，说明消费者对高品质红茶的支付意愿持续增强，
+        红茶成为茶产业中价值升级的代表性品类。
+        相比之下，黑茶产量占比 12.26%，产值占比仅 8.75%——量大但单价偏低。
+      </p>
+    </div>
+
+    <h3>全球茶产业：中国占半壁江山</h3>
+    <p>
+      2025 年，全球成品茶总产量达 <strong>726.64 万吨</strong>，同比增长 2.53%。
+      亚洲仍是绝对核心，产量占全球 88.6%。
+    </p>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>排名</th><th>国家/地区</th><th>产量（万吨）</th><th>占全球</th><th>特征</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><b>中国大陆</b></td><td>392</td><td>53.9%</td><td>六大茶类齐全，名优茶为主</td></tr>
+          <tr><td>2</td><td>印度</td><td>137</td><td>18.9%</td><td>阿萨姆、大吉岭、尼尔吉里三大产区</td></tr>
+          <tr><td>3</td><td>肯尼亚</td><td>54.9</td><td>7.6%</td><td>全球最大 CTC 红茶出口国</td></tr>
+          <tr><td>4</td><td>斯里兰卡</td><td>26.4</td><td>3.6%</td><td>锡兰红茶，高海拔产区品质优</td></tr>
+          <tr><td>5</td><td>土耳其</td><td>25.4</td><td>3.5%</td><td>人均饮茶量全球第一</td></tr>
+          <tr><td>6</td><td>越南</td><td>24.5</td><td>3.4%</td><td>同比 +35.8%，增速最快</td></tr>
+          <tr><td>7</td><td>印度尼西亚</td><td>12.0</td><td>1.7%</td><td>爪哇、苏门答腊红茶</td></tr>
+          <tr><td>8</td><td>孟加拉国</td><td>9.5</td><td>1.3%</td><td>锡尔赫特红茶，风格近阿萨姆</td></tr>
+          <tr><td>9</td><td>日本</td><td>6.8</td><td>0.9%</td><td>煎茶、玉露、抹茶，工艺精细</td></tr>
+          <tr><td>10</td><td>阿根廷</td><td>6.8</td><td>0.9%</td><td>主要供应茶包原料</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      出口方面，2025 年全球茶叶出口总量 <strong>200.92 万吨</strong>，首次突破 200 万吨。
+      肯尼亚以 58 万吨稳居第一，中国大陆 41.88 万吨位列第二。
+      进口方面，巴基斯坦、美国、俄罗斯、埃及、伊拉克位列前五。
+    </p>
+
+    <div class="callout tip">
+      <div class="c-title">◆ 黄金产茶带</div>
+      <p>
+        全球茶树种植集中在一条带状区域：<strong>北纬 20°–35°</strong>（中国江南、日本、印度北部）与
+        <strong>南纬 20°–30°</strong>（肯尼亚、南非、阿根廷）。
+        这一区域的温度、雨量、土壤条件最适合茶树生长。
+        这也解释了为什么高纬度、高海拔产区往往能出好茶——
+        昼夜温差大、生长慢、内含物质积累充分。
+      </p>
+    </div>
+
+    <h3>产业链：从茶园到茶杯</h3>
+    <div class="grid3">
+      <div class="card">
+        <h5>上游 · 种植</h5>
+        <p>茶树育种、育苗、茶园种植培育，以及有机肥、生态农药、茶园机械等农资供应。这是产业链的基础，直接决定产量与品质。</p>
+      </div>
+      <div class="card">
+        <h5>中游 · 加工</h5>
+        <p>初制加工、精制加工、品牌代工、大宗交易。这是把鲜叶转化为成品茶的核心环节，也是多数茶企聚焦的环节。</p>
+      </div>
+      <div class="card">
+        <h5>下游 · 流通</h5>
+        <p>线下：专卖店、商超、批发市场。线上：综合电商、社交电商、直播电商。<strong>2025 年线上零售额突破 400 亿元，直播电商交易额达 165 亿元。</strong></p>
+      </div>
+    </div>
+
+    <h3>竞争格局：大产业，小品牌</h3>
+    <p>
+      中国茶产业最鲜明的特征是<strong>高度分散</strong>。
+      行业头部企业的单品牌市占率<strong>均未超过 1%</strong>。
+      长期流传的「七万茶企不敌一个立顿」，说的就是这个困局。
+    </p>
+    <p>不过格局正在改变。2026 年 8 月发布的博鳌中国茶品牌价值榜显示：</p>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>排名</th><th>企业品牌</th><th>品牌价值（亿元）</th><th>特点</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><b>八马茶业</b></td><td>120.12</td><td>2025 年 10 月港交所上市；铁观音连续 14 年销量第一；全产业链整合</td></tr>
+          <tr><td>2</td><td>中茶</td><td>119.31</td><td>隶属中粮集团，覆盖六大茶类种植加工与分销，供应链体系最完备</td></tr>
+          <tr><td>3</td><td>华祥苑</td><td>70.52</td><td>渠道端布局密集</td></tr>
+          <tr><td>4</td><td>天福</td><td>66.41</td><td>港股上市，门店体系成熟</td></tr>
+          <tr><td>5</td><td>竹叶青</td><td>64.34</td><td>高端绿茶代表</td></tr>
+          <tr><td>6</td><td>华茗园</td><td>63.08</td><td>——</td></tr>
+          <tr><td>7</td><td>品品香</td><td>61.53</td><td>福鼎白茶龙头</td></tr>
+          <tr><td>8</td><td>张一元</td><td>55.12</td><td>茉莉花茶老字号</td></tr>
+          <tr><td>9</td><td>湖南省茶业集团</td><td>54.23</td><td>——</td></tr>
+          <tr><td>10</td><td>吴裕泰</td><td>51.36</td><td>茉莉花茶老字号</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>区域公用品牌价值 TOP6（2025）</h4>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>排名</th><th>区域公用品牌</th><th>品牌价值（亿元）</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>安溪铁观音</td><td>150.36</td></tr>
+          <tr><td>2</td><td>信阳毛尖</td><td>132.05</td></tr>
+          <tr><td>3</td><td>福鼎白茶</td><td>118.37</td></tr>
+          <tr><td>4</td><td>武夷岩茶 / 武夷山大红袍</td><td>113.29</td></tr>
+          <tr><td>5</td><td>洞庭山碧螺春</td><td>105.08</td></tr>
+          <tr><td>6</td><td>勐海茶</td><td>104.89</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout info">
+      <div class="c-title">◆ 政策方向</div>
+      <p>
+        2026 年 2 月，工信部联合商务部、文化和旅游部、市场监管总局、
+        中华全国供销合作总社印发<strong>《茶产业提质升级指导意见（2026—2030 年）》</strong>，
+        明确到 2030 年全产业链规模达 1.5 万亿元、规上精制茶加工业营收突破 2000 亿元。
+        2025 年，茶叶首次被正式列入国家<strong>「历史经典产业」</strong>（与丝绸、瓷器并列）。
+      </p>
+      <p>
+        同时，<strong>GB/T 46114-2025《茶叶供应链管理技术规范》</strong>已于 2026 年 4 月 1 日实施，
+        是我国茶叶供应链领域的首项国家标准，填补了从茶园到茶杯全程可追溯的规范空白。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 第九章 ============ -->
+<section class="chapter" id="c9">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 09</div>
+      <h2>实用手册<span class="h2sub">怎么买、怎么泡、怎么存</span></h2>
+    </div>
+
+    <h3>一、怎么买茶</h3>
+    <p>分三步：<strong>看渠道、看标识、试口感</strong>。</p>
+    <ul>
+      <li><strong>渠道</strong>：去有口碑的品牌店或正规电商，不买无任何标识的散装茶。太便宜的十有八九是拼配劣质茶。</li>
+      <li><strong>标识</strong>：看外包装是否有 SC 生产许可标志、无公害/绿色食品/有机茶认证、原产地认证。正规产品应有明确的产地与检测报告。</li>
+      <li><strong>试喝</strong>：买样试喝，不喜欢别勉强。茶是嗜好性饮品，<strong>买贵的不如买适口的</strong>。</li>
+    </ul>
+
+    <h4>从五个维度判断一款茶</h4>
+    <p>专业评茶看五项因子：<strong>外形、汤色、香气、滋味、叶底</strong>。普通人也可以照着做：</p>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>因子</th><th>怎么看</th><th>好茶的表现</th></tr></thead>
+        <tbody>
+          <tr><td><b>外形</b></td><td>看嫩度、条索、整碎、净度</td><td>嫩度好（芽头多、锋苗好、白毫显），条索紧结圆直，大小匀整，无梗无杂</td></tr>
+          <tr><td><b>汤色</b></td><td>看色度、亮度、清浊度</td><td>明亮、纯净、透明、有光泽。绿茶嫩绿，红茶红艳带金圈，乌龙橙黄，白茶浅黄</td></tr>
+          <tr><td><b>香气</b></td><td>辨纯异、比高低、看长短</td><td>香型纯正，高扬持久，冷后仍有余香。有烟、焦、酸、馊、霉味的直接放弃</td></tr>
+          <tr><td><b>滋味</b></td><td>口含少量茶汤，用舌细品</td><td>浓而鲜爽、醇厚回甘、有生津感。<b>苦能化、涩能开</b>是好茶；苦涩锁喉是缺陷</td></tr>
+          <tr><td><b>叶底</b></td><td>看嫩度、匀度、色泽，手按软硬</td><td>明亮、细嫩、厚实、柔软、色泽匀齐。暗、粗老、单薄、焦叶为次</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout tip">
+      <div class="c-title">◆ 一个一分钟小测试</div>
+      <p>
+        抓一撮干茶放手心，用嘴哈气让它受微热，凑近闻。
+        <strong>清香、干爽的是好茶；有霉味、烟味、刺鼻味直接放弃。</strong>
+        这一步不需要任何工具，也不需要经验。
+      </p>
+    </div>
+
+    <h3>二、怎么泡茶</h3>
+    <p>泡茶只有三个变量：<strong>水温、投茶量、时间</strong>。掌握它们，就不会难喝。</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>茶类</th><th>水温</th><th>茶水比</th><th>器具</th><th>出汤节奏</th></tr></thead>
+        <tbody>
+          <tr><td><b>绿茶 · 黄茶</b></td><td>80–85℃</td><td>1:50（3g 配 150ml）</td><td>玻璃杯</td><td>第一泡 1–2 分钟，可续 3–4 泡</td></tr>
+          <tr><td><b>白茶（新）</b></td><td>85–90℃</td><td>1:50</td><td>盖碗 / 玻璃杯</td><td>2–3 分钟，可续 4–5 泡</td></tr>
+          <tr><td><b>红茶</b></td><td>90–95℃</td><td>1:50–60</td><td>盖碗 / 瓷壶</td><td>2–3 分钟，可续 4–5 泡</td></tr>
+          <tr><td><b>乌龙茶</b></td><td>95–100℃</td><td>铺满碗底薄薄一层</td><td>盖碗 / 紫砂壶</td><td>前几泡 10 秒内出汤，每泡延长 5–10 秒，可泡 8 泡以上</td></tr>
+          <tr><td><b>黑茶 · 普洱</b></td><td>100℃ 沸水</td><td>占壶容 2/3</td><td>紫砂壶</td><td>先快速洗茶 1 次，前几泡 10–15 秒出汤</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>通用口诀</h4>
+    <ol>
+      <li><strong>先温杯</strong>：热水烫一下器具，茶香更容易出来。</li>
+      <li><strong>嫩茶不洗</strong>：嫩绿茶、红茶不必洗茶；老茶、紧压茶洗 1 次（快速润茶即倒掉）。</li>
+      <li><strong>前快后慢</strong>：前几泡快出汤，往后每泡多加 5–10 秒。</li>
+      <li><strong>宁淡勿浓</strong>：浓了伤胃、失眠、口涩，而且很难救回来。</li>
+      <li><strong>水要好</strong>：泡茶用水很重要，尤其绿茶芽叶细嫩，以纯净水为佳。</li>
+    </ol>
+
+    <div class="callout warn">
+      <div class="c-title">◆ 关于「洗茶」</div>
+      <p>
+        「洗茶」更准确的说法是<strong>「润茶」</strong>——目的是唤醒茶叶、让叶片舒展，
+        而不是真的去「洗净农残」。正规渠道的茶叶本就不需要靠洗来「去脏」。
+        嫩度高的绿茶用沸水冲一遍再倒掉，反而会损失最宝贵的第一泡鲜爽。
+      </p>
+    </div>
+
+    <h3>三、怎么存茶</h3>
+    <p>四个字：<strong>密封、避光、防潮、防味</strong>。茶叶极易吸味，必须远离油烟、香水、樟脑丸、调味品。</p>
+
+    <div class="grid3">
+      <div class="card">
+        <h5>需要冷藏</h5>
+        <p><strong>绿茶、黄茶、清香型乌龙</strong>。密封后放冰箱冷藏（0–5℃），不是冷冻。开封后尽量 3 个月内喝完。</p>
+      </div>
+      <div class="card">
+        <h5>常温存放</h5>
+        <p><strong>红茶、浓香型乌龙、新白茶</strong>。密封、阴凉、干燥、避光即可，不必进冰箱。</p>
+      </div>
+      <div class="card">
+        <h5>自然陈化</h5>
+        <p><strong>普洱、黑茶、老白茶</strong>。通风、干燥、避光、无异味、常温存放。时间是它的朋友。</p>
+      </div>
+    </div>
+
+    <h4>不同茶类的适饮期</h4>
+    <ul>
+      <li><strong>绿茶、茉莉花茶</strong>：建议 1 年内喝完。绿茶一般保质期 12–18 个月，超过两年鲜爽感明显减退。</li>
+      <li><strong>红茶、乌龙茶</strong>：2–3 年内为佳，密封得当可更久。</li>
+      <li><strong>普洱、黑茶、白茶</strong>：可长期存放，但需保证干燥无异味。民间经验认为普洱茶 5 年以上进入较佳品饮期，饮用不超过 15 年为宜（此为经验参考，非硬性标准）。</li>
+    </ul>
+
+    <div class="callout warn">
+      <div class="c-title">◆ 红线：霉变茶绝不入口</div>
+      <p>
+        判断一款茶还能不能喝，核心底线是<strong>无霉变、无异味、不干枯发脆</strong>。
+        受潮长霉的茶叶<strong>直接丢弃，绝对不能饮用</strong>——
+        霉菌毒素不是靠高温冲泡能去除的。这一点没有例外。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 第十章 ============ -->
+<section class="chapter" id="c10">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">CHAPTER 10</div>
+      <h2>茶道与茶俗<span class="h2sub">一杯茶里的中国，与茶杯外的世界</span></h2>
+    </div>
+
+    <h3>什么是「茶道」</h3>
+    <p>
+      茶道这个词，最早出现在唐代僧人<strong>皎然</strong>的诗里：
+      「一饮涤昏寐，情思朗爽满天地；再饮清我神，忽如飞雨洒轻尘；三饮便得道，何须苦心破烦恼。」
+      他把饮茶从解渴提升到了精神层面。
+    </p>
+    <p>
+      但「茶道」到底是什么，一千多年来没有统一定义。
+      周作人的解释最得人心：
+    </p>
+    <div class="callout note">
+      <div class="c-title">◆ 周作人论茶道</div>
+      <p>
+        「茶道的意思，用平凡的话来说，可以称作<strong>忙里偷闲，苦中作乐，
+        在不完全的现世享受一点美与和谐，在刹那间体会永久</strong>。」
+      </p>
+    </div>
+    <p>学界与茶人也有几种代表性的提法：</p>
+    <ul>
+      <li><strong>庄晚芳</strong>：茶道是通过饮茶进行礼法教育、道德修养的一种仪式，基本精神为<strong>「廉、美、和、敬」</strong>。</li>
+      <li><strong>吴振铎</strong>：<strong>「清、敬、怡、真」</strong>——清是清寂宁静，敬是尊重他人，怡是欢乐愉悦，真是真理真知。</li>
+      <li><strong>陈香白</strong>：茶道包含茶艺、茶德、茶礼、茶理、茶情、茶学说、茶道引导七种义理，<strong>核心是「和」</strong>。</li>
+    </ul>
+    <p>
+      中国茶道精神吸收了三家思想：儒家讲「中庸」「礼」，道家讲「自然」「无为」，
+      佛家讲「禅茶一味」「明心见性」。三者交汇，才有了中国茶那种既讲究又不执着的气质。
+    </p>
+
+    <h3>中国地方茶俗</h3>
+    <p>
+      中国茶俗的共同点是以茶事活动为中心、融入日常。但各地的做法差别极大，
+      而且几乎每一种都成了国家级非物质文化遗产。
+    </p>
+
+    <div class="region" style="border-left-color:#A8452C;">
+      <h5>潮州工夫茶 · 广东潮汕</h5>
+      <p>
+        「工夫」二字，意思是<strong>考究细致</strong>。潮州工夫茶源于宋代，清代中期蔚然成风，
+        是中国茶艺的古典流派。冲泡程式严谨，从茶具讲示、茶师净手、泥炉生火，
+        到关公巡城、韩信点兵，再到瑞气圆融，<strong>多达 21 式</strong>。
+        以乌龙茶（尤其凤凰单丛）为主。
+      </p>
+      <p>
+        它有一套很有意思的礼仪规则：无论客人多少，传统上只用摆成「品」字形的三个杯子；
+        每喝一杯，主人用滚烫开水烫洗杯子再给下一位。<strong>「酒满敬人，茶满欺人」</strong>——
+        茶倒太满会烫到客人。「先客后主，司炉最末」——泡茶的人最后一个喝。
+        第一冲茶带杂质一般不喝，给客人喝头冲茶被视为失礼。
+        这些规矩背后是一种朴素而深刻的平等观：斟好的第一杯给左手边第一位，
+        不论身份尊卑、年龄大小、性别。
+      </p>
+    </div>
+
+    <div class="region" style="border-left-color:#B0842C;">
+      <h5>白族三道茶 · 云南大理</h5>
+      <p>
+        起源可追溯到 8 世纪南诏时期。三道茶是白族节庆迎宾的礼仪，讲究<strong>「一苦、二甜、三回味」</strong>：
+      </p>
+      <p>
+        <strong>第一道苦茶（雷响茶）</strong>：以苍山绿茶在罐中烘烤抖动上百次，冲入沸水发出响声，茶色琥珀、浓香扑鼻，寓意人生波折。<br>
+        <strong>第二道甜茶</strong>：加核桃仁、红糖或蜂蜜煮沸，寓意苦尽甘来。<br>
+        <strong>第三道回味茶</strong>：添蜂蜜、花椒、桂皮，甜中带麻苦，寓意老年回味一生。
+      </p>
+      <p>三茶先苦后甜，是一套用茶讲出来的完整人生哲学。</p>
+    </div>
+
+    <div class="region" style="border-left-color:#3E8E5A;">
+      <h5>径山茶宴 · 浙江杭州</h5>
+      <p>
+        杭州余杭径山万寿禅寺接待贵宾的大堂茶会，起源于唐中期，盛行于宋元。
+        它是中国古代茶宴礼俗的存续，<strong>后传入日本，成为日本茶道之源</strong>。
+        也是本次人类非遗申报中重要的「习俗」类项目。
+      </p>
+    </div>
+
+    <div class="region" style="border-left-color:#7B5E3B;">
+      <h5>瑶族油茶 · 广西恭城</h5>
+      <p>
+        瑶族为适应山地潮湿、瘴气重的环境而发展出的饮食文化。
+        以油茶叶、生姜、大蒜等捶打熬煮成饮品，有消食健胃、驱湿避瘴之效。
+        贯穿瑶族人生礼仪——满月、婚嫁、贺寿、丧祭皆有油茶之礼，
+        待客至少饮三碗，唱茶歌、敬茶碗。
+      </p>
+    </div>
+
+    <p>此外还有：</p>
+    <ul>
+      <li><strong>藏族酥油茶</strong>：砖茶熬煮后加酥油、盐，用茶桶打制。高海拔地区的热量来源，也是待客最高礼节。</li>
+      <li><strong>客家擂茶</strong>：茶叶、花生、芝麻、米等一同擂磨成浆，冲入沸水，兼具食与饮。</li>
+      <li><strong>侗族打油茶</strong>：茶叶炒制后加水煮，配米花、花生、葱花，咸香可口。</li>
+      <li><strong>南宋「七家茶」</strong>：杭州旧俗，立夏时节家家烹新茶，配各色细果，杯内放两颗青果（橄榄或金桔）馈送邻里，寓意吉祥。</li>
+    </ul>
+
+    <div class="callout tip">
+      <div class="c-title">◆ 茶与礼俗</div>
+      <p>
+        古人认为茶树只能用种子繁殖、不能移植，因此把茶看作<strong>「至性不移」</strong>的象征。
+        民间男女订婚以茶为礼，女方接受聘礼叫<strong>「下茶」</strong>，并有
+        <strong>「一家不吃两家茶」</strong>的谚语。
+        客来敬茶，是中国最普遍、也最朴素的待客之道。
+      </p>
+    </div>
+
+    <h3>世界茶俗：一片叶子，一百种仪式</h3>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>地区</th><th>喝法</th><th>特色与礼仪</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>日本</b></td>
+            <td>抹茶道（Chanoyu / Sado）</td>
+            <td>以茶筅击拂抹茶粉，动作精确如仪轨，核心精神<strong>「和、敬、清、寂」</strong>。配和果子平衡苦味。受禅宗影响，强调当下与专注。</td>
+          </tr>
+          <tr>
+            <td><b>英国</b></td>
+            <td>英式下午茶</td>
+            <td>19 世纪由贝德福德公爵夫人 Anna 兴起。红茶加奶，配手指三明治、司康饼与凝脂奶油。High Tea 历史上是工人阶级的晚间正餐，与 Afternoon Tea 不是一回事。</td>
+          </tr>
+          <tr>
+            <td><b>土耳其</b></td>
+            <td>Çay</td>
+            <td>用双层壶 <strong>çaydanlık</strong> 冲泡浓茶，倒入郁金香形小玻璃杯，加方糖不加奶。<strong>人均饮茶量全球第一（约 3.2–3.5 kg/年）</strong>，全天候、随时随地都在喝。</td>
+          </tr>
+          <tr>
+            <td><b>摩洛哥 / 北非</b></td>
+            <td>薄荷绿茶</td>
+            <td>中国珠茶（gunpowder）加新鲜薄荷与大量糖，<strong>从高处倾倒制造泡沫</strong>，泡沫越丰富表示敬意越高。常行三杯礼：第一杯苦如生命，第二杯浓如爱情，第三杯柔如死亡。</td>
+          </tr>
+          <tr>
+            <td><b>俄罗斯</b></td>
+            <td>Samovar 茶炊</td>
+            <td>用小壶泡出浓茶浓缩液（zavarka），再从茶炊取热水自行稀释，加柠檬、果酱或方糖。是慢节奏、长时间社交的象征。</td>
+          </tr>
+          <tr>
+            <td><b>印度 / 巴基斯坦</b></td>
+            <td>Masala Chai</td>
+            <td>红茶与牛奶、糖、香料（小豆蔻、肉桂、姜、丁香）同煮，而非先泡后调。街边 chaiwala 小摊是日常社交中心，每天喝好几次。</td>
+          </tr>
+          <tr>
+            <td><b>中国香港</b></td>
+            <td>港式奶茶</td>
+            <td>浓锡兰红茶配淡奶或炼乳，是茶餐厅（cha chaan teng）的标配。与咖啡混合则叫<strong>「鸳鸯」</strong>。</td>
+          </tr>
+          <tr>
+            <td><b>美国</b></td>
+            <td>冰茶为主</td>
+            <td>南方偏甜（sweet tea），其他地区不加糖。热茶属少数派。</td>
+          </tr>
+          <tr>
+            <td><b>西藏 / 尼泊尔</b></td>
+            <td>酥油茶</td>
+            <td>砖茶加牦牛酥油与盐打制。高海拔地区的热量与能量来源，也是待客礼仪的核心。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout note">
+      <div class="c-title">◆ 一个共同的底色</div>
+      <p>
+        所有茶俗虽然在器皿、甜度、奶量、礼仪上各不相同，
+        但有一个共同点始终没变：<strong>茶是给客人端上来的那杯东西。</strong>
+        招待、尊敬、欢迎——这是茶在全球各地唯一的通用语义。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 附录 ============ -->
+<section class="chapter" id="c11">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-no">APPENDIX</div>
+      <h2>附录<span class="h2sub">术语速查、名茶清单与入门路径</span></h2>
+    </div>
+
+    <h3>附录一：常用术语速查</h3>
+    <div class="glossary">
+      <div class="gloss-item"><b>发酵（氧化）</b><span>茶多酚在自身酶作用下发生的自然氧化反应，是六大茶类分类的唯一标准。</span></div>
+      <div class="gloss-item"><b>杀青</b><span>高温使氧化酶失活，中止氧化。绿茶的核心工序。</span></div>
+      <div class="gloss-item"><b>萎凋</b><span>鲜叶摊晾失水变柔软，启动内部转化。白茶、红茶、乌龙茶的第一道工序。</span></div>
+      <div class="gloss-item"><b>做青</b><span>摇青与凉青交替，使叶缘氧化、叶心保绿。乌龙茶独有。</span></div>
+      <div class="gloss-item"><b>闷黄</b><span>杀青后湿热堆积静置，做出黄汤黄叶。黄茶独有。</span></div>
+      <div class="gloss-item"><b>渥堆</b><span>湿热环境中靠微生物菌群深度转化。黑茶独有。</span></div>
+      <div class="gloss-item"><b>窨制</b><span>利用茶叶吸附性吸收鲜花香气。花茶核心工艺，窨次越多香气越浓。</span></div>
+      <div class="gloss-item"><b>焙火</b><span>炭火或电焙缓慢烘焙，产生火香与喉韵。岩茶、浓香乌龙的精制手段。</span></div>
+      <div class="gloss-item"><b>拼配</b><span>不同批次或产区原料按比例混合，目的是让品质稳定一致，不是造假。</span></div>
+      <div class="gloss-item"><b>毛茶 / 精制</b><span>初制得到的半成品叫毛茶；精制后才是成品茶，含筛分、风选、拣剔、拼配。</span></div>
+      <div class="gloss-item"><b>明前 / 雨前</b><span>清明前 / 谷雨前采制的茶。明前最嫩价高，雨前性价比好。</span></div>
+      <div class="gloss-item"><b>汤色</b><span>茶汤的色泽，看色度、亮度、清浊度三方面。</span></div>
+      <div class="gloss-item"><b>叶底</b><span>冲泡后展开的茶叶，也叫茶渣。看嫩度、匀度、色泽，手按判断软硬。</span></div>
+      <div class="gloss-item"><b>回甘</b><span>饮后口腔内感到甘甜，常与苦味相关，「苦能回甘」。</span></div>
+      <div class="gloss-item"><b>生津</b><span>茶汤刺激口腔内壁，促使其分泌唾液的感觉。</span></div>
+      <div class="gloss-item"><b>喉韵</b><span>茶汤咽下后喉部的舒适感——爽快、清凉、甘甜或滋润。</span></div>
+      <div class="gloss-item"><b>锁喉</b><span>茶汤咽下后喉部干涩、麻痒、肿胀等不适感。通常是品质缺陷。</span></div>
+      <div class="gloss-item"><b>水味</b><span>茶味与水分离，咽下后口腔空无茶味。多见于冲泡不当或品质不佳。</span></div>
+      <div class="gloss-item"><b>毫香</b><span>白毫丰富的茶冲泡时散发的香气，多见于高等级新茶，如白毫银针。</span></div>
+      <div class="gloss-item"><b>岩韵</b><span>武夷岩茶特有的风味感受，形容茶汤醇厚、喉韵深长、香气沉稳。</span></div>
+      <div class="gloss-item"><b>音韵</b><span>安溪铁观音特有的风味感受，兰花香明显、回甘持久。</span></div>
+      <div class="gloss-item"><b>陈香</b><span>黑茶、普洱、老白茶在陈化过程中转化出的自然香气，无霉气。</span></div>
+      <div class="gloss-item"><b>金圈</b><span>优质红茶茶汤边缘的一圈金黄亮边，是品质良好的表现。</span></div>
+      <div class="gloss-item"><b>蜻蜓头 / 泥鳅条</b><span>形容茶叶外形的术语。蜻蜓头多指铁观音，泥鳅条多指黑茶紧卷圆直的条索。</span></div>
+      <div class="gloss-item"><b>蛤蟆背 / 鳝皮色</b><span>乌龙茶干茶术语。蛤蟆背指叶背起沙粒状白点，鳝皮色指砂绿蜜黄的色泽。</span></div>
+      <div class="gloss-item"><b>绿叶红镶边</b><span>乌龙茶的典型特征：叶缘氧化泛红、叶心保持绿意。</span></div>
+      <div class="gloss-item"><b>台地茶 / 古树茶</b><span>台地茶指人工密集种植的茶园茶；古树茶指采自树龄较长野生或半野生茶树的茶。</span></div>
+      <div class="gloss-item"><b>SC 认证</b><span>食品生产许可证标志，正规茶叶产品包装上应有。</span></div>
+    </div>
+
+    <h3>附录二：中国十大名茶（通行说法）</h3>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>名茶</th><th>产区</th><th>茶类</th><th>一句话特点</th></tr></thead>
+        <tbody>
+          <tr><td><b>西湖龙井</b></td><td>浙江杭州西湖</td><td>绿茶</td><td>扁平光滑，糙米色，豆香馥郁，有「色绿、香郁、味甘、形美」四绝</td></tr>
+          <tr><td><b>洞庭碧螺春</b></td><td>江苏苏州洞庭山</td><td>绿茶</td><td>卷曲如螺，白毫毕露，花果香独特，春分至清明前采制者最佳</td></tr>
+          <tr><td><b>黄山毛峰</b></td><td>安徽黄山</td><td>绿茶</td><td>形似雀舌，色如象牙，香气清幽，鲜爽醇和</td></tr>
+          <tr><td><b>庐山云雾</b></td><td>江西九江</td><td>绿茶</td><td>产自高山云雾间，芽叶肥壮，香气清高持久</td></tr>
+          <tr><td><b>六安瓜片</b></td><td>安徽六安</td><td>绿茶</td><td>唯一去梗去芽、只用叶片的绿茶，形似瓜子，浓醇耐泡</td></tr>
+          <tr><td><b>君山银针</b></td><td>湖南岳阳君山岛</td><td>黄茶</td><td>芽头肥壮、金黄光亮，有「金镶玉」之誉，气韵高雅</td></tr>
+          <tr><td><b>信阳毛尖</b></td><td>河南信阳</td><td>绿茶</td><td>细圆光直多白毫，汤色嫩绿，滋味浓醇，栗香明显</td></tr>
+          <tr><td><b>武夷岩茶</b></td><td>福建武夷山</td><td>乌龙茶</td><td>岩骨花香，代表为大红袍、肉桂、水仙，焙火沉稳</td></tr>
+          <tr><td><b>安溪铁观音</b></td><td>福建泉州安溪</td><td>乌龙茶</td><td>兰花香明显，音韵悠长，「蜻蜓头、青蛙腿」外形特征</td></tr>
+          <tr><td><b>祁门红茶</b></td><td>安徽黄山祁门</td><td>红茶</td><td>独有清雅「祁门香」，馥郁持久，世界三大高香红茶之一</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13.6px;color:var(--ink-3);">
+      注：十大名茶属民间通行说法，不同年代、不同评选口径的名单略有差异。以上为流传最广的版本之一。
+    </p>
+
+    <h3>附录三：零基础 30 天入门路径</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-era">第 1 周 · 建立框架<span>不急着买茶</span></div>
+        <p>把第三章「六大茶类」的那张表记住：绿茶杀青、白茶萎凋、黄茶闷黄、乌龙做青、红茶发酵、黑茶渥堆。理解「一片叶子可以做六种茶」。这一步比喝多少茶都重要。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">第 2 周 · 横向对比<span>买基础款，不提贵</span></div>
+        <p>各买 50 克基础款的绿茶、红茶、熟普，用同一套器具、同样的水，分别冲泡。目标不是品出好坏，而是<strong>建立「原来它们差别这么大」的直观感受</strong>。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">第 3 周 · 练冲泡<span>只调一个变量</span></div>
+        <p>拿同一款茶，只改水温（80℃ / 95℃ / 沸水），其他都不变，各喝一次。你会立刻明白「水温为什么重要」。下周改投茶量，再下周改出汤时间。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">第 4 周 · 建立自己的判断<span>记录 + 复购</span></div>
+        <p>准备一个小本子，记下每次喝的茶：产地、价格、香气、滋味、喜不喜欢。一个月后回头看，你会发现自己已经能说出「我喜欢什么样的茶」——这就是入门完成的标志。</p>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="c-title">◆ 三条给新手的忠告</div>
+      <ol style="margin-bottom:0;">
+        <li><strong>不要从最贵的开始。</strong>贵的茶往往风味极致但个性强，新手喝不出好，反而容易被误导。</li>
+        <li><strong>不要迷信年份与山头。</strong>「老班章」「冰岛」这类名头是造假重灾区，没有信任的渠道不要轻易尝试。</li>
+        <li><strong>不要一次买太多。</strong>茶叶有适饮期，喝不完的茶会变味。宁可少量多次。</li>
+      </ol>
+    </div>
+
+    <h3>附录四：一份可以随身带的速查卡</h3>
+    <div class="grid2">
+      <div class="card">
+        <h5>水温口诀</h5>
+        <p>
+          绿茶黄茶 <strong>80–85℃</strong><br>
+          红茶白茶 <strong>90–95℃</strong><br>
+          乌龙黑茶 <strong>100℃</strong>
+        </p>
+      </div>
+      <div class="card">
+        <h5>投茶口诀</h5>
+        <p>
+          绿茶红茶 盖碗拇指一撮<br>
+          普洱乌龙 铺满碗底薄薄一层<br>
+          原则：<strong>宁淡勿浓</strong>
+        </p>
+      </div>
+      <div class="card">
+        <h5>存放口诀</h5>
+        <p>
+          绿茶黄茶 <strong>进冰箱</strong><br>
+          红茶乌龙 <strong>常温放</strong><br>
+          普洱白茶 <strong>通风存</strong>
+        </p>
+      </div>
+      <div class="card">
+        <h5>避坑口诀</h5>
+        <p>
+          看标识、闻干香、试口感<br>
+          霉味烟味刺鼻味 <strong>直接放弃</strong><br>
+          太便宜的十有八九有问题
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>
+      <b>关于本讲义</b><br>
+      本讲义为茶行业通识培训材料，面向零基础读者，内容涵盖茶的植物学来源、历史文化、
+      六大茶类体系、制茶工艺、四大茶区、再加工茶与现代茶饮、成分科学、产业数据、
+      实用手册、茶道茶俗与术语速查。
+    </p>
+    <p style="margin-top:14px;">
+      <b>数据说明</b><br>
+      产业数据主要依据中国茶叶流通协会、《2025 年度中国茶叶产销形势分析报告》、
+      国际茶叶委员会《2025 年统计公报》、艾媒咨询新式茶饮行业报告等公开资料整理，
+      数据统计年度以 2025 年为主。价格、品牌、市场数据具时效性，实际应用请以最新发布为准。
+    </p>
+    <p style="margin-top:14px;">
+      <b>健康提示</b><br>
+      本讲义中涉及茶叶成分与健康的内容均为科普性质，不构成医疗建议。
+      存在疾病、孕期哺乳期、特殊用药情况者，请咨询专业医师。
+    </p>
+    <div class="fline">
+      茶之为饮，发乎神农氏 · 茶不在贵，适口为珍
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

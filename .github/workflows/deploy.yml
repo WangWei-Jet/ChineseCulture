@@ -1,0 +1,64 @@
+name: Deploy to GitHub Pages
+
+on:
+  # 推送到 main 分支时自动部署
+  push:
+    branches: [main]
+  # 允许在 Actions 页面手动触发
+  workflow_dispatch:
+
+# 授予 GITHUB_TOKEN 部署到 GitHub Pages 所需的最小权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只允许一个部署任务，避免并发冲突
+# 注意：cancel-in-progress 保持 false，让进行中的部署跑完，避免线上出现半成品
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: 构建站点
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Pages
+        uses: actions/configure-pages@v5
+
+      - name: 收集静态文件
+        run: |
+          mkdir -p _site
+          # 复制全部静态内容，但排除版本控制与 CI 相关文件
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_site' \
+            --exclude='.gitignore' \
+            --exclude='README.md' \
+            ./ _site/
+          # 确保 .nojekyll 存在，阻止 Pages 用 Jekyll 处理（否则下划线开头的文件会被忽略）
+          touch _site/.nojekyll
+          echo "---- 待部署文件清单 ----"
+          find _site -type f | sort
+
+      - name: 上传站点产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: 发布到 GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署
+        id: deployment
+        uses: actions/deploy-pages@v4
