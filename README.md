@@ -61,16 +61,21 @@ python3 -m http.server 8000
 - **构建过程**：把仓库内除 `.git` / `.github` / `_site` / `README.md` 之外的文件复制到 `_site/`，
   并写入 `.nojekyll`，然后作为 Pages 产物上传
 - **权限**：使用 `GITHUB_TOKEN`，已声明 `pages: write` 与 `id-token: write`
+- **Pages 启用**：`configure-pages` 已设置 `enablement: true`，首次部署会自动开启 Pages
+  并把 Source 设为 GitHub Actions，**无需任何手动操作**
 
-### 首次启用 Pages
+### 关于 Pages 设置
 
-仓库创建后需要**手动开启一次** Pages：
+若日后部署报错 `Get Pages site failed` 或 `Not Found`，多半是 Pages 被关闭了。
+可在 **Settings → Pages → Build and deployment → Source** 手动选一次 **GitHub Actions**，
+再重跑工作流即可。日常维护不需要碰这个设置。
 
-1. 打开仓库 **Settings → Pages**
-2. 在 **Build and deployment → Source** 处选择 **GitHub Actions**
-3. 回到 **Actions** 页面，运行一次 `Deploy to GitHub Pages` 工作流
+## 站点状态
 
-之后每次推送 `main` 都会自动重新部署。
+| 页面 | 地址 | 状态 |
+| --- | --- | --- |
+| 首页 | https://wangwei-jet.github.io/ChineseCulture/ | 已上线 |
+| 茶 · 通识讲义 | https://wangwei-jet.github.io/ChineseCulture/tea/ | 已上线 |
 
 ## 数据与内容说明
 

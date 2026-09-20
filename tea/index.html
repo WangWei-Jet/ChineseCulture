@@ -63,7 +63,10 @@ body{
   font-family:"Songti SC",Georgia,serif;
   font-size:17px;font-weight:700;letter-spacing:.06em;
   color:var(--green-2);white-space:nowrap;
+  text-decoration:none;
+  transition:color .18s ease;
 }
+.brand:hover{color:var(--gold);}
 .brand span{color:var(--gold);}
 .navscroll{
   display:flex;gap:4px;overflow-x:auto;flex:1;
@@ -337,7 +340,7 @@ tbody tr:hover{background:#FCFBF7;}
 <!-- ============ 导航 ============ -->
 <nav class="topnav">
   <div class="topnav-inner">
-    <div class="brand">茶 <span>·</span> 通识讲义</div>
+    <a class="brand" href="../" title="返回中国文化研习录首页">茶 <span>·</span> 通识讲义</a>
     <div class="navscroll">
       <a href="#c1">起源</a>
       <a href="#c2">茶史</a>
@@ -1801,6 +1804,9 @@ tbody tr:hover{background:#FCFBF7;}
     </p>
     <div class="fline">
       茶之为饮，发乎神农氏 · 茶不在贵，适口为珍
+    </div>
+    <div style="margin-top:16px;font-size:13px;">
+      <a href="../" style="color:var(--green);text-decoration:none;border-bottom:1px solid var(--line-2);padding-bottom:2px;">← 返回「中国文化研习录」首页</a>
     </div>
   </div>
 </footer>
