@@ -356,6 +356,48 @@ tbody tr:hover{background:#FCFBF7;}
 .fig svg .ct{text-anchor:middle;}
 .fig svg .rt{text-anchor:end;}
 
+/* ---------- 照片组件 ---------- */
+.photo-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));
+  gap:16px;margin:26px 0 30px;
+}
+.ph{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;margin:0;
+}
+.ph img{
+  display:block;width:100%;height:190px;object-fit:cover;
+  background:var(--paper-3);
+}
+.ph .ph-body{padding:12px 14px 14px;flex:1;display:flex;flex-direction:column;}
+.ph .ph-t{font-size:14.2px;font-weight:600;color:var(--ink);margin-bottom:5px;line-height:1.5;}
+.ph .ph-d{font-size:12.8px;color:var(--ink-2);line-height:1.7;flex:1;}
+.ph .ph-src{
+  margin-top:8px;padding-top:7px;border-top:1px solid var(--line);
+  font-size:11px;color:var(--ink-3);line-height:1.5;
+}
+.ph .ph-src a{color:var(--ink-3);text-decoration:underline;}
+.ph .ph-src a:hover{color:var(--green);}
+
+.photo-wide{
+  margin:26px 0 30px;background:var(--paper-2);
+  border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);
+}
+.photo-wide img{display:block;width:100%;max-height:400px;object-fit:cover;background:var(--paper-3);}
+.photo-wide .pw-body{padding:16px 20px 18px;}
+.photo-wide .pw-t{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.photo-wide .pw-d{font-size:13.6px;color:var(--ink-2);line-height:1.75;}
+.photo-wide .pw-src{
+  margin-top:10px;padding-top:9px;border-top:1px solid var(--line);
+  font-size:11.5px;color:var(--ink-3);line-height:1.6;
+}
+
+.photo-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:26px 0 30px;}
+.photo-2 .ph img{height:230px;}
+@media(max-width:760px){.photo-2{grid-template-columns:1fr;}}
+
 /* ---------- 结尾 ---------- */
 .footer{
   margin-top:70px;background:#1F3A2E;color:#B9CFC2;
@@ -435,6 +477,37 @@ tbody tr:hover{background:#FCFBF7;}
       它跟我们熟悉的油茶、观赏山茶花是远亲，但只有这一个物种——以及它的两个变种——
       才能做成我们喝的茶。
     </p>
+
+    <div class="photo-2">
+      <figure class="ph">
+        <img src="img/camellia-plate.jpg" alt="茶树的植物学图谱，依次绘出枝叶、花朵与果实" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">茶树植物学图谱</div>
+          <div class="ph-d">
+            19 世纪的植物学图版，从左到右完整画出一株茶树：枝叶、白瓣黄蕊的花、以及茶籽。
+            茶花有五个花瓣、雄蕊成簇——这是山茶科最典型的特征。
+          </div>
+          <div class="ph-src">
+            图：Franz Eugen Köhler《Medizinal-Pflanzen》(1887)｜公共领域｜
+            <a href="https://commons.wikimedia.org/wiki/File:Camellia_sinensis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-025.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>
+          </div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/tea-field-meijiawu.jpg" alt="杭州梅家坞龙井茶园的茶树行" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">茶园里的茶树（杭州梅家坞）</div>
+          <div class="ph-d">
+            日常看到的茶树其实是被修剪成矮丛状的。为了采茶方便，茶树被人为控制在齐腰高度，
+            行距整齐——这是几百年栽培驯化的结果，不是它的自然形态。
+          </div>
+          <div class="ph-src">
+            图：Peter K Burian｜CC BY-SA 4.0｜
+            <a href="https://commons.wikimedia.org/wiki/File:Longjing_Tea_field,_Dragon_Well_area,_Meijiawu_China.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>
+          </div>
+        </div>
+      </figure>
+    </div>
     <p>这两个变种，决定了中国茶版图的基本样貌：</p>
     <ul>
       <li><strong>小叶种（<em>var. sinensis</em>）</strong>：叶片小、耐寒，主要在长江流域及以北。江南、江北茶区的名优绿茶多出自它，香气细腻，滋味清雅。</li>
@@ -979,6 +1052,15 @@ tbody tr:hover{background:#FCFBF7;}
       <li><strong>海上茶路</strong>：经广州、厦门等口岸销往欧洲。17—18 世纪，茶成为欧洲上流社会的奢侈品，深刻影响了英国的饮食文化与贸易格局。</li>
     </ul>
 
+    <figure class="photo-wide">
+      <img src="img/tea-terrace.jpg" alt="杭州龙井茶园依山而建的梯田" loading="lazy">
+      <div class="pw-body">
+        <div class="pw-t">杭州龙井的茶园梯田</div>
+        <div class="pw-d">茶树的生长需要排水良好、坡度适中。江南茶区的丘陵地形正好满足这一点，<strong>中国名优绿茶至今仍高度集中在这些坡地上</strong>——不是没有道理的地理选择。</div>
+        <div class="pw-src">图：<a href="https://commons.wikimedia.org/wiki/File:Tea_plantations_in_Longjing,_Hangzhou.jpg" target="_blank" rel="noopener">Wishva de Silva</a>｜CC BY-SA 3.0｜Wikimedia Commons</div>
+      </div>
+    </figure>
+
     <div class="callout warn">
       <div class="c-title">◆ 一个常见误解</div>
       <p>
@@ -1017,6 +1099,15 @@ tbody tr:hover{background:#FCFBF7;}
         跟酿酒、做酸奶那种微生物发酵不是一回事（黑茶是例外，它确实有微生物参与）。
         氧化越深，茶汤越醇厚、香气越沉稳；氧化越浅，越保留草木本味，茶汤越清鲜。
       </p>
+
+    <figure class="photo-wide">
+      <img src="img/oolong-brew.jpg" alt="冻顶乌龙茶在瓷壶中冲泡" loading="lazy">
+      <div class="pw-body">
+        <div class="pw-t">冻顶乌龙在瓷壶中冲泡</div>
+        <div class="pw-d">乌龙茶投茶量大、水温高，前几泡要快出汤。茶壶中的叶片在热水里舒展，这是判断一款乌龙茶耐泡度的直观时刻。</div>
+        <div class="pw-src">图：<a href="https://commons.wikimedia.org/wiki/File:Dung-ti-oolong-kanne-gross.jpg" target="_blank" rel="noopener">soultea.de/André Helbig</a>｜CC BY 3.0｜Wikimedia Commons</div>
+      </div>
+    </figure>
     </div>
 
     <div class="spectrum">
@@ -1126,6 +1217,67 @@ tbody tr:hover{background:#FCFBF7;}
         <strong>理解了这张图，就等于理解了中国茶的全部逻辑。</strong>
       </figcaption>
     </figure>
+
+
+    <figure class="photo-wide">
+      <img src="img/ferment-grades.jpg" alt="从左到右排列的不同发酵程度的茶叶对比" loading="lazy">
+      <div class="pw-body">
+        <div class="pw-t">不同发酵程度的茶叶，从左到右排开</div>
+        <div class="pw-d">同一片叶子，因氧化程度不同而呈现完全不同的颜色与形态：左边接近原叶的青绿，右边则深沉近黑。<strong>发酵光谱上的每一格，都是茶叶在时间里走过的距离。</strong></div>
+        <div class="pw-src">图：<a href="https://commons.wikimedia.org/wiki/File:Tea_in_different_grade_of_fermentation.jpg" target="_blank" rel="noopener">Haneburger</a>｜Public domain｜Wikimedia Commons</div>
+      </div>
+    </figure>
+
+    <div class="photo-grid">
+      <figure class="ph">
+        <img src="img/dried-longjing.jpg" alt="绿茶龙井干茶，芽叶扁平光滑呈糙米色" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">绿茶 · 龙井</div>
+          <div class="ph-d">干茶扁平光滑、呈糙米色，是炒青工艺「压扁」做形的结果。绿茶讲「三绿」——干茶绿、汤色绿、叶底绿。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea_15.jpg" target="_blank" rel="noopener">Jessie csz</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/white-silverbuds.jpg" alt="白茶白毫银针，满披白色茸毛的芽头" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">白茶 · 白毫银针</div>
+          <div class="ph-d">满披白色茸毛，这是未杀青、仅经萎凋与干燥留下的原始形态。白茶工艺最简，几乎只做一件事：让它慢慢失水。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:White_pu_erh_silver_buds.jpg" target="_blank" rel="noopener">Qirille</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/yellow-tea-gaiwan.jpg" alt="盖碗中的黄茶黄芽，汤色与叶底呈黄色" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">黄茶 · 黄芽</div>
+          <div class="ph-d">黄汤黄叶是「闷黄」的结果——杀青后趁热堆积，让它在湿热中温和转化，青涩褪去、甜度上升。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Gaiwan-yellow-tea-huang-ya.jpg" target="_blank" rel="noopener">KirillK</a>｜CC0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/oolong-leaf.jpg" alt="乌龙茶干茶条索，色泽青褐" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">青茶 · 乌龙</div>
+          <div class="ph-d">条索紧结、色泽青褐。乌龙是半发酵茶，做青时叶缘氧化泛红、叶心保持绿意，形成「绿叶红镶边」。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Jin_Fo_Oolong_tea_leaf.jpg" target="_blank" rel="noopener">User:Iateasquirrel</a>｜CC BY-SA 3.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/black-leaf.jpg" alt="红茶干茶，发酵后呈乌黑油润的条索" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">红茶 · 锡兰红茶</div>
+          <div class="ph-d">全发酵后叶片转为乌黑油润，茶汤红艳。红茶的关键是让茶多酚几乎完全氧化，苦涩由此转为甜醇。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Ceylon_black_tea_leaves.jpg" target="_blank" rel="noopener">Patrick Kolencherry</a>｜CC BY-SA 3.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/puer-cake.jpg" alt="普洱七子饼茶，压制成圆饼的黑茶" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">黑茶 · 普洱七子饼</div>
+          <div class="ph-d">压制成饼是黑茶的传统形态，便于长途运输与长期陈化。它是六大茶类里唯一确实有微生物参与的。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Pu-erh_tea_front.JPG" target="_blank" rel="noopener">静葉</a>｜CC BY-SA 3.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+    </div>
 
     <div class="tea-grid">
 
@@ -1290,6 +1442,49 @@ tbody tr:hover{background:#FCFBF7;}
       决定这片叶子是继续氧化、停止氧化，还是换一种方式转化。
       下面这七个词，是听懂制茶的关键。
     </p>
+
+    <div class="photo-grid">
+      <figure class="ph">
+        <img src="img/picking-longjing.jpg" alt="人工采摘龙井鲜叶的双手与茶园" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">采摘：人工采茶</div>
+          <div class="ph-d">采茶至今仍是手工活。判断嫩度、避开老叶、保证芽叶完整，机器难以替代——这也是高端茶价格高的原因之一。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea_17.jpg" target="_blank" rel="noopener">Jessie csz</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/frying-tea.jpg" alt="制茶人在锅中手工翻炒茶叶" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">杀青：手工炒茶</div>
+          <div class="ph-d">炒锅温度可达两百摄氏度以上，制茶人徒手在锅中翻炒，靠手感判断温度与时机。高温让多酚氧化酶失活，把绿色「定」住。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:A_man_who_is_frying_tea.jpg" target="_blank" rel="noopener">Jessie csz</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/white-withering.jpg" alt="白茶萎凋工序，鲜叶薄摊在竹筛上" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">萎凋：白茶摊晾</div>
+          <div class="ph-d">白茶不炒不揉，只把鲜叶薄薄摊开，让它自然失水、轻度氧化。这一步靠的是时间与通风，不是火。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:White_Tea_Withering.jpg" target="_blank" rel="noopener">KZZZ01</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/pick-basket.jpg" alt="用于采摘茶叶的竹编背篓" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">茶篓：采摘的容器</div>
+          <div class="ph-d">竹编茶篓透气，避免鲜叶闷热发酵——这个细节直接关系到鲜叶质量。传统茶区的采茶人多用竹篓而非塑料袋。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Wicker_Basket_for_Tea_Harvesting.jpg" target="_blank" rel="noopener">AGRI-BIOTECH FARM INTERNATIO…</a>｜CC0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/white-picking.jpg" alt="茶农手工采摘白茶的芽叶" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">采摘标准：手工择芽</div>
+          <div class="ph-d">采茶讲究「嫩、匀、净」，至今难以完全机械化。同一个芽头，采得越早、标准越严，成本越高——这是单芽茶价格能到普通茶数倍的原因。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:White_tea_hand-picking.jpg" target="_blank" rel="noopener">KZZZ01</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+    </div>
 
     <div class="grid2">
       <div class="card">
@@ -1588,6 +1783,15 @@ tbody tr:hover{background:#FCFBF7;}
       </figcaption>
     </figure>
 
+    <figure class="photo-wide">
+      <img src="img/longjing-village.jpg" alt="杭州龙井村的茶园与民居" loading="lazy">
+      <div class="pw-body">
+        <div class="pw-t">龙井村：名茶与地名重合的地方</div>
+        <div class="pw-d">西湖龙井的核心产区就在杭州西湖周边的几个村落。<strong>「地名即品牌」是中国茶最典型的现象</strong>——同一品种、同一工艺，换个山头，价格可以差十倍。</div>
+        <div class="pw-src">图：<a href="https://commons.wikimedia.org/wiki/File:Longjing_villiage.jpg" target="_blank" rel="noopener">Jessie csz</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+      </div>
+    </figure>
+
     <div class="region" style="border-left-color:#3E8E5A;">
       <h5>一、江南茶区 —— 名优绿茶的集中产区</h5>
       <p>
@@ -1825,6 +2029,33 @@ tbody tr:hover{background:#FCFBF7;}
       后传入日本被发展成抹茶道。近年随新茶饮和烘焙业爆发，
       中国已成为全球最大抹茶生产国：
     </p>
+
+    <div class="photo-2">
+      <figure class="ph">
+        <img src="img/matcha-mill.jpg" alt="传统石磨正在将碾茶研磨成抹茶粉" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">石磨研磨抹茶</div>
+          <div class="ph-d">碾茶在花岗岩石磨中缓慢磨成微米级粉末。石磨转速极低，为的是不产生高温——热会破坏抹茶的鲜绿色与香气。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Matcha_stone_mill_grinding_tencha_into_powder.jpg" target="_blank" rel="noopener">Derjochenmeyer</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/matcha-bowl.jpg" alt="茶碗中打好的抹茶，表面浮着细腻泡沫" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">抹茶茶碗</div>
+          <div class="ph-d">抹茶道中的茶碗口宽底厚，便于用茶筅击拂。这一套器具与饮法由宋代点茶传入日本后独立演化而来。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Ceremonial_matcha.jpg" target="_blank" rel="noopener">Matchalover99</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/matcha-layout.jpg" alt="抹茶粉、冲泡好的抹茶与碾茶原叶并排对照" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">抹茶粉 · 茶汤 · 原叶</div>
+          <div class="ph-d">同一样东西的三个阶段：磨好的粉、击拂后的茶汤、未研磨的碾茶原叶。<strong>抹茶与普通绿茶粉的区别在原料——抹茶用遮光栽培的碾茶，鲜味更浓、颜色更翠。</strong></div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Matcha_layout_with_leaf,_tea,_and_powder.jpg" target="_blank" rel="noopener">dungthuyvunguyen</a>｜CC0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+    </div>
     <ul>
       <li>2020 至 2025 年，全球抹茶产量从 8266 吨增长至 17600 吨，增幅 113%，年均增长率超 20%。</li>
       <li>2025 年，中国抹茶总产量突破 12000 吨，<strong>占全球近 70%</strong>。</li>
@@ -2166,6 +2397,19 @@ tbody tr:hover{background:#FCFBF7;}
       进口方面，巴基斯坦、美国、俄罗斯、埃及、伊拉克位列前五。
     </p>
 
+
+    <figure class="photo-wide">
+      <img src="img/pick-nandi.jpg" alt="印度茶园中正在进行采摘作业的采茶工" loading="lazy">
+      <div class="pw-body">
+        <div class="pw-t">另一种产业逻辑：印度茶园的采摘作业</div>
+        <div class="pw-d">
+          印度、肯尼亚、斯里兰卡等产区的茶，绝大多数流向国际市场，以大宗红茶与 CTC 碎茶为主。
+          <strong>与中国茶「以内销名优茶为主」的路径完全不同</strong>——同样种茶，做的是两种生意。
+        </div>
+        <div class="pw-src">图：<a href="https://commons.wikimedia.org/wiki/File:Tea_picking_in_Nandi_Hills.jpg" target="_blank" rel="noopener">Constance Derouin</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+      </div>
+    </figure>
+
     <div class="callout tip">
       <div class="c-title">◆ 黄金产茶带</div>
       <p>
@@ -2413,6 +2657,33 @@ tbody tr:hover{background:#FCFBF7;}
       </figcaption>
     </figure>
 
+    <div class="photo-grid">
+      <figure class="ph">
+        <img src="img/longjing-dry.jpg" alt="龙井干茶特写，扁平挺直的芽叶" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">冲泡前：干茶</div>
+          <div class="ph-d">抓一撮干茶看外形，是最基础的一步。龙井应是扁平挺直、大小匀齐，如果碎末多、色泽暗，品质就打个折扣。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea.jpg" target="_blank" rel="noopener">Difference engine</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/longjing-brew.jpg" alt="盖碗中正在冲泡的龙井茶" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">冲泡中：盖碗注水</div>
+          <div class="ph-d">绿茶宜用 80–85℃ 的水，沿杯壁注水避免直冲芽叶。水温过高会把嫩叶「烫熟」，鲜爽感随即消失。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea_steeping_in_gaiwan.jpg" target="_blank" rel="noopener">Difference engine</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+      <figure class="ph">
+        <img src="img/longjing-infused.jpg" alt="龙井冲泡后的叶底，芽叶舒展" loading="lazy">
+        <div class="ph-body">
+          <div class="ph-t">冲泡后：叶底</div>
+          <div class="ph-d">叶底是评茶的最后一道，也最能说明真相：嫩度、匀度、色泽是否明亮，一看便知。好茶的叶底舒展柔软，不是碎渣。</div>
+          <div class="ph-src">图：<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea_after_steeping.jpg" target="_blank" rel="noopener">Difference engine</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+        </div>
+      </figure>
+    </div>
+
     <div class="tbl-scroll">
       <table>
         <thead><tr><th>茶类</th><th>水温</th><th>茶水比</th><th>器具</th><th>出汤节奏</th></tr></thead>
@@ -2534,6 +2805,15 @@ tbody tr:hover{background:#FCFBF7;}
       「一饮涤昏寐，情思朗爽满天地；再饮清我神，忽如飞雨洒轻尘；三饮便得道，何须苦心破烦恼。」
       他把饮茶从解渴提升到了精神层面。
     </p>
+
+    <figure class="photo-wide">
+      <img src="img/tea-ceremony-cn.jpg" alt="中式茶席，摆放着盖碗公道杯与品茗杯" loading="lazy">
+      <div class="pw-body">
+        <div class="pw-t">中式茶席：盖碗、公道杯与品茗杯</div>
+        <div class="pw-d">现代中式茶席的基本配置——<strong>盖碗冲泡、公道杯匀汤、品茗杯分饮</strong>。公道杯的出现解决了「同一壶茶前后浓度不均」的问题，让每位客人喝到的一样，是很现代也很中国的发明。</div>
+        <div class="pw-src">图：<a href="https://commons.wikimedia.org/wiki/File:Chinese_Tea_Ceremony.jpg" target="_blank" rel="noopener">Il lupa</a>｜CC BY-SA 4.0｜Wikimedia Commons</div>
+      </div>
+    </figure>
     <p>
       但「茶道」到底是什么，一千多年来没有统一定义。
       周作人的解释最得人心：
@@ -2944,6 +3224,39 @@ tbody tr:hover{background:#FCFBF7;}
       本讲义中涉及茶叶成分与健康的内容均为科普性质，不构成医疗建议。
       存在疾病、孕期哺乳期、特殊用药情况者，请咨询专业医师。
     </p>
+    <p style="margin-top:14px;">
+      <b>图片来源</b><br>
+      本页照片均取自 Wikimedia Commons，为自由许可（CC BY-SA / CC BY / CC0 / 公共领域），
+      可自由使用与再分发，条件是保留署名。逐张出处如下：
+    </p>
+    <ul style="margin-top:10px;font-size:12.4px;line-height:1.8;columns:1;padding-left:20px;">
+        <li><b>茶树的植物学图谱，依次绘出枝叶、花朵与果实</b> — Franz Eugen Köhler, Köhler's Medizinal-Pflanzen，Public domain，<a href="https://commons.wikimedia.org/wiki/File:Camellia_sinensis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-025.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>从左到右排列的不同发酵程度的茶叶对比</b> — Haneburger，Public domain，<a href="https://commons.wikimedia.org/wiki/File:Tea_in_different_grade_of_fermentation.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>抹茶粉、冲泡好的抹茶与碾茶原叶并排对照</b> — dungthuyvunguyen，CC0，<a href="https://commons.wikimedia.org/wiki/File:Matcha_layout_with_leaf,_tea,_and_powder.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>用于采摘茶叶的竹编背篓</b> — AGRI-BIOTECH FARM INTERNATIONAL，CC0，<a href="https://commons.wikimedia.org/wiki/File:Wicker_Basket_for_Tea_Harvesting.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>盖碗中的黄茶黄芽，汤色与叶底呈黄色</b> — KirillK，CC0，<a href="https://commons.wikimedia.org/wiki/File:Gaiwan-yellow-tea-huang-ya.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>红茶干茶，发酵后呈乌黑油润的条索</b> — Patrick Kolencherry，CC BY-SA 3.0，<a href="https://commons.wikimedia.org/wiki/File:Ceylon_black_tea_leaves.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>绿茶龙井干茶，芽叶扁平光滑呈糙米色</b> — Jessie csz，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea_15.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>制茶人在锅中手工翻炒茶叶</b> — Jessie csz，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:A_man_who_is_frying_tea.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>盖碗中正在冲泡的龙井茶</b> — Difference engine，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea_steeping_in_gaiwan.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>龙井干茶特写，扁平挺直的芽叶</b> — Difference engine，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>龙井冲泡后的叶底，芽叶舒展</b> — Difference engine，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea_after_steeping.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>杭州龙井村的茶园与民居</b> — Jessie csz，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Longjing_villiage.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>茶碗中打好的抹茶，表面浮着细腻泡沫</b> — Matchalover99，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Ceremonial_matcha.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>传统石磨正在将碾茶研磨成抹茶粉</b> — Derjochenmeyer，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Matcha_stone_mill_grinding_tencha_into_powder.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>冻顶乌龙茶在瓷壶中冲泡</b> — soultea.de/André Helbig，CC BY 3.0，<a href="https://commons.wikimedia.org/wiki/File:Dung-ti-oolong-kanne-gross.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>乌龙茶干茶条索，色泽青褐</b> — User:Iateasquirrel，CC BY-SA 3.0，<a href="https://commons.wikimedia.org/wiki/File:Jin_Fo_Oolong_tea_leaf.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>印度茶园中正在进行采摘作业的采茶工</b> — Constance Derouin，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Tea_picking_in_Nandi_Hills.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>人工采摘龙井鲜叶的双手与茶园</b> — Jessie csz，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Longjing_tea_17.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>普洱七子饼茶，压制成圆饼的黑茶</b> — 静葉，CC BY-SA 3.0，<a href="https://commons.wikimedia.org/wiki/File:Pu-erh_tea_front.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>中式茶席，摆放着盖碗公道杯与品茗杯</b> — Il lupa，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Chinese_Tea_Ceremony.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>杭州梅家坞龙井茶园的茶树行</b> — Peter K Burian，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Longjing_Tea_field,_Dragon_Well_area,_Meijiawu_China.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>杭州龙井茶园依山而建的梯田</b> — Wishva de Silva，CC BY-SA 3.0，<a href="https://commons.wikimedia.org/wiki/File:Tea_plantations_in_Longjing,_Hangzhou.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>茶农手工采摘白茶的芽叶</b> — KZZZ01，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:White_tea_hand-picking.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>白茶白毫银针，满披白色茸毛的芽头</b> — Qirille，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:White_pu_erh_silver_buds.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+        <li><b>白茶萎凋工序，鲜叶薄摊在竹筛上</b> — KZZZ01，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:White_Tea_Withering.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+    </ul>
+
     <div class="fline">
       茶之为饮，发乎神农氏 · 茶不在贵，适口为珍
     </div>
