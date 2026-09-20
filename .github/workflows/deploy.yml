@@ -29,6 +29,10 @@ jobs:
 
       - name: 配置 Pages
         uses: actions/configure-pages@v5
+        with:
+          # 仓库首次部署时 Pages 尚未开启，这一步会自动启用（Source 设为 GitHub Actions）
+          # 若已开启则自动跳过，无需手动改动
+          enablement: true
 
       - name: 收集静态文件
         run: |
